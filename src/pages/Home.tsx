@@ -2,79 +2,72 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Rocket, Calendar, Users, Brain } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import Spline from '@splinetool/react-spline';
 import Button from '../components/Button';
-import NewsCarousel from '../components/NewsCarousel';
 import SectionTitle from '../components/SectionTitle';
-import { newsItems } from '../data/news';
 import { events } from '../data/events';
 
 const Home: React.FC = () => {
+  const [isLoading, setIsLoading] = React.useState(true); // Loader state
   const upcomingEvents = events.filter(event => event.isUpcoming).slice(0, 3);
+
   React.useEffect(() => {
-    window.scrollTo(0, 0); 
+    window.scrollTo(0, 0);
   }, []);
+
   return (
-    <div>
+    <div className="relative">
+      {/* Loader Overlay */}
+      {isLoading && (
+        <div className="fixed inset-0 bg-black flex items-center justify-center z-50">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="text-white text-2xl font-bold"
+          >
+            <video
+              src="../../assets/animate.webm"
+              autoPlay
+              loop
+              className="w-full h-full object-contain"
+            />
+          </motion.div>
+        </div>
+      )}
+
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center">
-        {/* Background stars effect */}
-        <div className="absolute inset-0 overflow-hidden">
-          {[...Array(50)].map((_, i) => (
-            <div
-              key={i}
-              style={{
-                top: `${Math.random() * 100}%`,
-                left: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 4}s`,
-              }}
-              className="absolute h-1 w-1 rounded-full bg-white animate-twinkle"
-            ></div>
-          ))}
+      <section className="relative min-h-screen flex flex-col overflow-hidden">
+        {/* Animation Background */}
+        <div className="absolute inset-0 z-0 h-fill w-fill">
+          <Spline
+            scene="https://prod.spline.design/QjLrwJxpfT067XIc/scene.splinecode"
+            onLoad={() => setIsLoading(false)}
+          />
         </div>
 
         {/* Hero content */}
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 z-10 pt-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white leading-tight">
-                <img src="/logo/astc_logo.png" alt="" className="w-40 my-6" />
-                Exploring Beyond <br />
-                <span className="text-space-accent">The Stars </span>
-              </h1>
-              <p className="text-gray-300 text-lg my-6">
-                We are the Aeronautics and Space Technology Club (ASTC) of IIT
-                ISM Dhanbad, dedicated to fostering innovation and exploration
-                in aerospace technologies.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Link to="/about">
-                  <Button variant="primary" size="lg">
-                    Discover ASTC
-                  </Button>
-                </Link>
-                <Link to="/join">
-                  <Button variant="outline" size="lg">
-                    Join Us
-                  </Button>
-                </Link>
-              </div>
-            </motion.div>
-
+        <div className="relative min-h-screen flex flex-col">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 z-10 flex-grow flex flex-col justify-center items-center text-center pt-44 pb-32 md:pb-0">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="hidden lg:block"
+              className="w-full max-w-3xl"
             >
-              <div className="relative">
-                <div className="absolute -inset-0.5 bg-space-accent/30 rounded-full blur-3xl opacity-20"></div>
-                <div className="relative bg-space-dark/30 backdrop-blur-sm p-6 rounded-xl border border-white/10">
-                  <NewsCarousel news={newsItems} />
-                </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white leading-tight inset-20">
+                Exploring Beyond <br />
+                <span className="text-green"> The Stars</span>
+              </h1>
+              <p className="text-gray-300 text-lg my-6 mx-auto">
+                We are the Aeronautics and Space Technology Club (ASTC) of IIT ISM Dhanbad, dedicated to fostering innovation and exploration in aerospace technologies.
+              </p>
+              <div className="flex flex-wrap gap-4 justify-center">
+                <Link to="/about">
+                  <Button variant="primary" size="lg">Discover ASTC</Button>
+                </Link>
+                <Link to="/join">
+                  <Button variant="outline" size="lg">Join Us</Button>
+                </Link>
               </div>
             </motion.div>
           </div>
@@ -89,33 +82,12 @@ const Home: React.FC = () => {
             subtitle="At the Aeronautics and Space Technology Club (ASTC), we are passionate about space exploration, aeronautics engineering, and fostering a community of future aerospace innovators."
             light={true}
           />
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
             {[
-              {
-                icon: <Rocket size={40} className="text-space-accent" />,
-                title: "Innovation",
-                description:
-                  "We push the boundaries of what's possible in aerospace engineering through creative solutions.",
-              },
-              {
-                icon: <Calendar size={40} className="text-space-accent" />,
-                title: "Events",
-                description:
-                  "From stargazing nights to rocket workshops, we host events that inspire and educate.",
-              },
-              {
-                icon: <Users size={40} className="text-space-accent" />,
-                title: "Community",
-                description:
-                  "Join a diverse group of students passionate about space and aeronautics.",
-              },
-              {
-                icon: <Brain size={40} className="text-space-accent" />,
-                title: "Research",
-                description:
-                  "We collaborate on research projects with real-world applications in space technology.",
-              },
+              { icon: <Rocket size={40} className="text-space-accent" />, title: "Innovation", description: "We push the boundaries of what's possible in aerospace engineering through creative solutions." },
+              { icon: <Calendar size={40} className="text-space-accent" />, title: "Events", description: "From stargazing nights to rocket workshops, we host events that inspire and educate." },
+              { icon: <Users size={40} className="text-space-accent" />, title: "Community", description: "Join a diverse group of students passionate about space and aeronautics." },
+              { icon: <Brain size={40} className="text-space-accent" />, title: "Research", description: "We collaborate on research projects with real-world applications in space technology." },
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -126,14 +98,11 @@ const Home: React.FC = () => {
                 className="bg-white/5 backdrop-blur-sm p-6 rounded-lg border border-white/10 hover:transform hover:-translate-y-1 transition-all duration-300"
               >
                 <div className="mb-4">{item.icon}</div>
-                <h3 className="text-white text-xl font-bold mb-2">
-                  {item.title}
-                </h3>
+                <h3 className="text-white text-xl font-bold mb-2">{item.title}</h3>
                 <p className="text-gray-300">{item.description}</p>
               </motion.div>
             ))}
           </div>
-
           <div className="text-center mt-12">
             <Link to="/about">
               <Button variant="outline">Learn More About Us</Button>
@@ -150,7 +119,6 @@ const Home: React.FC = () => {
             subtitle="Join us for our exciting events and activities"
             light={true}
           />
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             {upcomingEvents.map((event, index) => (
               <motion.div
@@ -169,28 +137,18 @@ const Home: React.FC = () => {
                   />
                 </div>
                 <div className="p-5">
-                  <h3 className="text-white text-xl font-bold mb-2">
-                    {event.title}
-                  </h3>
-                  <p className="text-space-accent font-medium mb-2">
-                    {event.date}
-                  </p>
-                  <p className="text-gray-300 mb-4 line-clamp-3">
-                    {event.description}
-                  </p>
+                  <h3 className="text-white text-xl font-bold mb-2">{event.title}</h3>
+                  <p className="text-space-accent font-medium mb-2">{event.date}</p>
+                  <p className="text-gray-300 mb-4 line-clamp-3">{event.description}</p>
                   {event.registrationLink && (
-                    <Link to={"/join"}>
-
-                    <Button variant="outline" size="sm">
-                      Learn more
-                    </Button>
+                    <Link to="/join">
+                      <Button variant="outline" size="sm">Learn more</Button>
                     </Link>
                   )}
                 </div>
               </motion.div>
             ))}
           </div>
-
           <div className="text-center mt-12">
             <Link to="/events">
               <Button variant="primary">View All Events</Button>
@@ -221,8 +179,7 @@ const Home: React.FC = () => {
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
             >
-              Join the ASTC family and be part of exciting projects, events, and
-              a community of space enthusiasts.
+              Join the ASTC family and be part of exciting projects, events, and a community of space enthusiasts.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -231,9 +188,7 @@ const Home: React.FC = () => {
               transition={{ delay: 0.2 }}
             >
               <Link to="/join">
-                <Button variant="primary" size="lg">
-                  Join Us!
-                </Button>
+                <Button variant="primary" size="lg">Join Us!</Button>
               </Link>
             </motion.div>
           </div>
