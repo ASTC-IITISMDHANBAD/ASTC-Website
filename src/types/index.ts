@@ -33,3 +33,7 @@ export interface NewsItem {
   description: string;
   image: string;
 }
+
+export interface Members {
+
+}
