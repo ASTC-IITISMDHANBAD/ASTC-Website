@@ -34,6 +34,21 @@ export interface NewsItem {
   image: string;
 }
 
-export interface Members {
-
+export interface Member {
+  id: number;
+  name: string;
+  email: string;
+  contactNo: number | null;
+  links: {
+    github?: string;
+    linkedin?: string;
+    facebook?: string;
+    instagram?: string;
+    website?: string;
+    twitter?: string;
+    medium?: string;
+    quora?: string;
+  };
+  img: string | null;
+  yearOfGrad: string;
 }
