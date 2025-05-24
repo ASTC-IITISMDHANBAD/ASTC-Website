@@ -5,6 +5,10 @@ import MemberCard from '../components/MemberCard';
 
 const Members: React.FC = () => {
 
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const sortedMembers = [...members].sort((a, b) => {
     const yearDiff = parseInt(a.yearOfGrad) - parseInt(b.yearOfGrad);
     if (yearDiff !== 0) return yearDiff;

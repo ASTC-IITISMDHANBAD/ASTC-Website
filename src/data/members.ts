@@ -1,8 +1,8 @@
-import { Member } from "../types";
+import { Member } from "../types"
 
 export const members: Member[] = [
     {
-        id: 1,
+        id: "24JE0728",
         name: "Akshat Rai",
         email: "24je0728@iitism.ac.in",
         contactNo: "8107121718",
@@ -13,5 +13,195 @@ export const members: Member[] = [
         },
         img: null,
         yearOfGrad: "2028",
+    },
+    {
+        id: "24JE0740",
+        name: "Pranavishvar. H",
+        email: "pranavishvar@gmail.com",
+        contactNo: null,
+        links: {
+            linkedin: "https://www.linkedin.com/in/pranavishvar-hariprakash-441a6431b/",
+        },
+        img: null,
+        yearOfGrad: "2028",
+    },
+    {
+        id: "24JE0771",
+        name: "Arjav Jain",
+        email: "jainarjav1410@gmail.com",
+        contactNo: "7974386224",
+        links: {
+            linkedin: "https://www.linkedin.com/in/arjav-jain-b22476237/",
+            instagram: "https://www.instagram.com/arjavj_314/",
+            twitter: "https://x.com/ArjavJ_314/",
+        },
+        img: null,
+        yearOfGrad: "2028",
+    },
+    {
+        id: "24JE0737",
+        name: "Manas Lokhande",
+        email: " 24je0737@iitism.ac.in",
+        contactNo: "9637116762",
+        links: {
+            github: "https://github.com/CyberSorcerer-real",
+            linkedin: "https://www.linkedin.com/in/manas-lokhande-755342320/",
+        },
+        img: null,
+        yearOfGrad: "2028",
+    },
+    {
+        id: "24JE0220",
+        name: "Nishchay",
+        email: "nishchaykumar235@gmail.com",
+        contactNo: null,
+        links: {
+            linkedin: "https://www.linkedin.com/in/nishchay-2410a4354/",
+            medium: "https://medium.com/@24je0220",
+        },
+        img: null,
+        yearOfGrad: "2028",
+    },
+    {
+        id: "24JE1058",
+        name: "Soumik Dutta",
+        email: "soumikdutta9a2020@gmail.com",
+        contactNo: "8902005875",
+        links: {
+            github: "https://github.com/Nob007",
+            linkedin: "https://www.linkedin.com/in/soumik3/",
+        },
+        img: null,
+        yearOfGrad: "2028",
+    },
+        {
+        id: "24JE0745",
+        name: "Shayan Mondal ",
+        email: "shayanmondal122005@gmail.com ",
+        contactNo: "9832126751",
+        links: {
+            linkedin: "https://www.linkedin.com/in/shayan-mondal-b7a120320",
+        },
+        img: null,
+        yearOfGrad: "2028",
+    },
+    {
+        id: "24JE0342",
+        name: "Shruti Jha",
+        email: "24je0342@iitism.ac.in",
+        contactNo: null,
+        links: {
+        },
+        img: null,
+        yearOfGrad: "2028",
+    },
+    {
+        id: "24JE0528",
+        name: "Yash Budvansh",
+        email: "yashbvansh@gmail.com",
+        contactNo: "null ",
+        links: {
+            linkedin: "https://www.linkedin.com/in/yash-budvansh-191305272/",
+        },
+        img: "yash-budvansh.jpg",
+        yearOfGrad: "2028",
+    },
+    {
+        id: "24JE0594",
+        name: "Aryan Raj",
+        email: "aryanraj.arjamui@gmail.com",
+        contactNo: null,
+        links: {
+            linkedin: "https://www.linkedin.com/in/aryan-raj-39726131a/",
+        },
+        img: null,
+        yearOfGrad: "2028",
+    },
+    {
+        id: "24JE0177",
+        name: "Subrat Panda",
+        email: "subratssp2006@gmail.com",
+        contactNo: null,
+        links: {
+            github: "https://github.com/Subrat2006",
+            linkedin: "http://www.linkedin.com/in/subrat-panda-1402aa317",
+            instagram: "https://www.instagram.com/soupiepanda/",
+        },
+        img: "subrat-panda.jpeg",
+        yearOfGrad: "2028",
+    },
+    {
+        id: "24JE0663",
+        name: "Neelamber Mishra",
+        email: "neelambermishra10@gmail.com",
+        contactNo: null,
+        links: {
+            github: "https://github.com/neelamber-mishra",
+        },
+        img: null,
+        yearOfGrad: "2028",
+    },
+    {
+        id: "23JE0847",
+        name: "Bobbili Nandagopal",
+        email: "23je0248@iitism.ac.in",
+        contactNo: "7036480245",
+        links: {
+            linkedin: "https://www.linkedin.com/in/nandagopal-bobbili",
+        },
+        img: null,
+        yearOfGrad: "2027",
+    },
+    {
+        id: "23JE0498",
+        name: "Korukonda Dharmik",
+        email: "23je0498@iitism.ac.in",
+        contactNo: "9492038399",
+        links: {
+            linkedin: "https://www.linkedin.com/in/korukonda-dharmik",
+        },
+        img: "korukonda-dharmik.jpg",
+        yearOfGrad: "2027",
+    },
+    {
+        id: "23JE0699",
+        name: "Pathan Gulamgaush",
+        email: "23je0699@iitism.ac.in",
+        contactNo: "8758964805",
+        links: {
+            linkedin: "https://www.linkedin.com/in/gulamgaush-pathan",
+        },
+        img: "pathan-gulamgaush.jpg",
+        yearOfGrad: "2027",
+    },
+    {
+        id: "23JE0847",
+        name: "Swapnil",
+        email: "23je0847@iitism.ac.in",
+        contactNo: "7815092560",
+        links: {
+        },
+        img: null,
+        yearOfGrad: "2027",
+    },
+    {
+        id: "23JE0971",
+        name: "Sucheta Ghosal",
+        email: "23je0971@iitism.ac.in",
+        contactNo: "8918815184",
+        links: {
+        },
+        img: null,
+        yearOfGrad: "2027",
+    },
+    {
+        id: "23JE0076",
+        name: "Vidya Shree",
+        email: "23je0076@iitism.ac.in",
+        contactNo: null,
+        links: {
+        },
+        img: null,
+        yearOfGrad: "2027",
     },
 ]

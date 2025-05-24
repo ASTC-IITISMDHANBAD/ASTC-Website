@@ -26,7 +26,7 @@ const MemberCard: React.FC<MemberCardProps> = ({member, index}) => {
           className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
         />
       </div>
-      <h1 className='text-3xl font-display font-bold text-white my-5 text-center max-w-full'>
+      <h1 className='text-3xl font-display font-bold text-white my-5 text-center max-w-[80%]'>
         { member.name }
       </h1>
       <div className="h-1 w-[40%] bg-space-accent"></div>

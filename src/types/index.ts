@@ -35,7 +35,7 @@ export interface NewsItem {
 }
 
 export interface Member {
-  id: number;
+  id: string;
   name: string;
   email: string | null;
   contactNo: string | null;
