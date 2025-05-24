@@ -4,6 +4,13 @@ import { members } from '../data/members';
 import MemberCard from '../components/MemberCard';
 
 const Members: React.FC = () => {
+
+  const sortedMembers = [...members].sort((a, b) => {
+    const yearDiff = parseInt(a.yearOfGrad) - parseInt(b.yearOfGrad);
+    if (yearDiff !== 0) return yearDiff;
+    return a.name.localeCompare(b.name);
+  });
+
   return (
     <div className='pt-20'>
       <section className="py-16 md:py-24 bg-space-primary/20">
@@ -37,15 +44,15 @@ const Members: React.FC = () => {
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {members.map((member, index) => (
-              <MemberCard key={member.id} member={member} index={index} />
-            ))}
+        <section className="py-16 md:py-24">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20">
+              {sortedMembers.map((member, index) => (
+                <MemberCard key={member.id} member={member} index={index} />
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
     </div>
   )

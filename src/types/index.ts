@@ -37,8 +37,8 @@ export interface NewsItem {
 export interface Member {
   id: number;
   name: string;
-  email: string;
-  contactNo: number | null;
+  email: string | null;
+  contactNo: string | null;
   links: {
     github?: string;
     linkedin?: string;
