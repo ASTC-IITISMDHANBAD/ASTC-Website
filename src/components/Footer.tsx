@@ -29,6 +29,7 @@ const Footer: React.FC = () => {
                 "About",
                 "Events",
                 "Projects",
+                "Members",
                 "Join Us",
                 "Contact",
               ].map((item) => (
