@@ -33,3 +33,22 @@ export interface NewsItem {
   description: string;
   image: string;
 }
+
+export interface Member {
+  id: string;
+  name: string;
+  email: string | null;
+  contactNo: string | null;
+  links: {
+    github?: string;
+    linkedin?: string;
+    facebook?: string;
+    instagram?: string;
+    website?: string;
+    twitter?: string;
+    medium?: string;
+    quora?: string;
+  };
+  img: string | null;
+  yearOfGrad: string;
+}
