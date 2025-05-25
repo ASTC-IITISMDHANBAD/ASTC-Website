@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Rocket, Calendar, Users, Brain } from 'lucide-react';
 import { Link } from 'react-router-dom';
-//import Spline from '@splinetool/react-spline';
+import Spline from '@splinetool/react-spline';
 import Button from '../components/Button';
 import SectionTitle from '../components/SectionTitle';
 import { events } from '../data/events';
@@ -20,24 +20,15 @@ const Home: React.FC = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex flex-col overflow-hidden">
   {/* Animation Background */}
-  <div className="absolute inset-0 z-0 h-fill w-fill">
-    {/* <Spline
+  <div className="absolute inset-0 z-0">
+    <Spline
       scene="https://prod.spline.design/mA0mWjz2Ka4vZU0T/scene.splinecode"
-      
-    /> */}
-    <video
-              src="/assets/A-Star.mp4"
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-full object-cover"
     />
   </div>
 
   {/* Hero content */}
-  <div className="relative min-h-screen flex flex-col">
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 z-10 flex-grow flex flex-col justify-center items-center text-center pt-44 pb-32 md:pb-0">
+  <div className="relative min-h-screen flex flex-col z-10 pointer-events-none">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex-grow flex flex-col justify-center items-center text-center pt-44 pb-32 md:pb-0">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
