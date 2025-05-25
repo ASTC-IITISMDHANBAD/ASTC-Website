@@ -2,13 +2,12 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Rocket, Calendar, Users, Brain } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import Spline from '@splinetool/react-spline';
+//import Spline from '@splinetool/react-spline';
 import Button from '../components/Button';
 import SectionTitle from '../components/SectionTitle';
 import { events } from '../data/events';
 
 const Home: React.FC = () => {
-  const [isLoading, setIsLoading] = React.useState(true); // Loader state
   const upcomingEvents = events.filter(event => event.isUpcoming).slice(0, 3);
 
   React.useEffect(() => {
@@ -17,65 +16,56 @@ const Home: React.FC = () => {
 
   return (
     <div className="relative">
-      {/* Loader Overlay */}
-      {isLoading && (
-        <div className="fixed inset-0 bg-black flex items-center justify-center z-50">
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="text-white text-2xl font-bold"
-          >
-            <video
-              src="../../assets/animate.webm"
-              autoPlay
-              loop
-              className="w-full h-full object-contain"
-            />
-          </motion.div>
-        </div>
-      )}
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex flex-col overflow-hidden">
-        {/* Animation Background */}
-        <div className="absolute inset-0 z-0 h-fill w-fill">
-          <Spline
-            scene="https://prod.spline.design/QjLrwJxpfT067XIc/scene.splinecode"
-            onLoad={() => setIsLoading(false)}
-          />
-        </div>
+  {/* Animation Background */}
+  <div className="absolute inset-0 z-0">
+    {/* <Spline
+      scene="https://prod.spline.design/mA0mWjz2Ka4vZU0T/scene.splinecode"
+      
+    /> */}
+    <video
+              src="../../assets/A-Star.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover"
+    />
+  </div>
 
-        {/* Hero content */}
-        <div className="relative min-h-screen flex flex-col">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 z-10 flex-grow flex flex-col justify-center items-center text-center pt-44 pb-32 md:pb-0">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="w-full max-w-3xl"
-            >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white leading-tight inset-20">
-                Exploring Beyond <br />
-                <span className="text-green"> The Stars</span>
-              </h1>
-              <p className="text-gray-300 text-lg my-6 mx-auto">
-                We are the Aeronautics and Space Technology Club (ASTC) of IIT ISM Dhanbad, dedicated to fostering innovation and exploration in aerospace technologies.
-              </p>
-              <div className="flex flex-wrap gap-4 justify-center">
-                <Link to="/about">
-                  <Button variant="primary" size="lg">Discover ASTC</Button>
-                </Link>
-                <Link to="/join">
-                  <Button variant="outline" size="lg">Join Us</Button>
-                </Link>
-              </div>
-            </motion.div>
-          </div>
+  {/* Hero content */}
+  <div className=" flex flex-col z-10 pointer-events-none ">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex-grow flex flex-col justify-center items-center text-center pt-44 pb-32 md:pb-0">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="w-full max-w-3xl pointer-events-auto"
+      >
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white leading-tight inset-20">
+          Exploring Beyond <br />
+          <span className="text-green"> The Stars</span>
+        </h1>
+        <p className="text-gray-300 text-lg my-6 mx-auto">
+          We are the Aeronautics and Space Technology Club (ASTC) of IIT ISM Dhanbad, dedicated to fostering innovation and exploration in aerospace technologies.
+        </p>
+        <div className="flex flex-wrap gap-4 justify-center">
+          <Link to="/about">
+            <Button variant="primary" size="lg">Discover ASTC</Button>
+          </Link>
+          <Link to="/join">
+            <Button variant="outline" size="lg">Join Us</Button>
+          </Link>
         </div>
-      </section>
+      </motion.div>
+    </div>
+  </div>
+</section>
 
       {/* About Preview Section */}
-      <section className="py-16 md:py-24 bg-space-primary/30 backdrop-blur-sm">
+      <section className=" relative py-16 md:py-24 bg-space-primary  z-20 pt-24 pb-16" style={{ top: '-80px' }}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
             title="About ASTC"
