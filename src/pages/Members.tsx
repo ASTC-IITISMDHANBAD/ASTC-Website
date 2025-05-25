@@ -10,7 +10,7 @@ const Members: React.FC = () => {
   }, []);
 
   const sortedMembers = [...members].sort((a, b) => {
-    const yearDiff = parseInt(a.yearOfGrad) - parseInt(b.yearOfGrad);
+    const yearDiff = parseInt(a.id.substring(0,2)) - parseInt(b.id.substring(0,2));
     if (yearDiff !== 0) return yearDiff;
     return a.name.localeCompare(b.name);
   });

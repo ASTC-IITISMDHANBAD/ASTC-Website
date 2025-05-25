@@ -36,7 +36,7 @@ const MemberCard: React.FC<MemberCardProps> = ({member, index, delayModulus}) =>
           <button
             onClick={() => navigator.clipboard.writeText(member.email ? member.email : "")}
             title="Copy Email"
-            className="hover:text-space-accent hover:scale-150 active:text-black transition"
+            className="hover:text-space-accent hover:scale-150 active:text-black active:scale-100 transition"
           >
             <MdEmail />
           </button>
@@ -45,19 +45,19 @@ const MemberCard: React.FC<MemberCardProps> = ({member, index, delayModulus}) =>
           <button
             onClick={() => navigator.clipboard.writeText(member.contactNo ? member.contactNo : "")}
             title="Copy Phone Number"
-            className="hover:text-space-accent hover:scale-150 active:text-black transition"
+            className="hover:text-space-accent hover:scale-150 active:text-black active:scale-100 transition"
           >
             <MdPhone />
           </button>
         )}
-        {links.github && <a href={links.github} target="_blank" rel="noopener noreferrer" className="hover:text-space-accent hover:scale-150 active:text-black transition"><FaGithub /></a>}
-        {links.linkedin && <a href={links.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-space-accent hover:scale-150 active:text-black transition"><FaLinkedin /></a>}
-        {links.facebook && <a href={links.facebook} target="_blank" rel="noopener noreferrer" className="hover:text-space-accent hover:scale-150 active:text-black transition"><FaFacebook /></a>}
-        {links.instagram && <a href={links.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-space-accent hover:scale-150 active:text-black transition"><FaInstagram /></a>}
-        {links.website && <a href={links.website} target="_blank" rel="noopener noreferrer" className="hover:text-space-accent hover:scale-150 active:text-black transition"><FaGlobe /></a>}
-        {links.twitter && <a href={links.twitter} target="_blank" rel="noopener noreferrer" className="hover:text-space-accent hover:scale-150 active:text-black transition"><FaTwitter /></a>}
-        {links.medium && <a href={links.medium} target="_blank" rel="noopener noreferrer" className="hover:text-space-accent hover:scale-150 active:text-black transition"><FaMedium /></a>}
-        {links.quora && <a href={links.quora} target="_blank" rel="noopener noreferrer" className="hover:text-space-accent hover:scale-150 active:text-black transition"><FaQuora /></a>}
+        {links.github && <a href={links.github} target="_blank" rel="noopener noreferrer" className="hover:text-space-accent hover:scale-150 active:text-black active:scale-100 transition"><FaGithub /></a>}
+        {links.linkedin && <a href={links.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-space-accent hover:scale-150 active:text-black active:scale-100 transition"><FaLinkedin /></a>}
+        {links.facebook && <a href={links.facebook} target="_blank" rel="noopener noreferrer" className="hover:text-space-accent hover:scale-150 active:text-black active:scale-100 transition"><FaFacebook /></a>}
+        {links.instagram && <a href={links.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-space-accent hover:scale-150 active:text-black active:scale-100 transition"><FaInstagram /></a>}
+        {links.website && <a href={links.website} target="_blank" rel="noopener noreferrer" className="hover:text-space-accent hover:scale-150 active:text-black active:scale-100 transition"><FaGlobe /></a>}
+        {links.twitter && <a href={links.twitter} target="_blank" rel="noopener noreferrer" className="hover:text-space-accent hover:scale-150 active:text-black active:scale-100 transition"><FaTwitter /></a>}
+        {links.medium && <a href={links.medium} target="_blank" rel="noopener noreferrer" className="hover:text-space-accent hover:scale-150 active:text-black active:scale-100 transition"><FaMedium /></a>}
+        {links.quora && <a href={links.quora} target="_blank" rel="noopener noreferrer" className="hover:text-space-accent hover:scale-150 active:text-black active:scale-100 transition"><FaQuora /></a>}
       </div>
     </motion.div>
   )

@@ -32,6 +32,7 @@ export const members: Member[] = [
         email: "jainarjav1410@gmail.com",
         contactNo: "7974386224",
         links: {
+            github: "https://github.com/ArjavJain123",
             linkedin: "https://www.linkedin.com/in/arjav-jain-b22476237/",
             instagram: "https://www.instagram.com/arjavj_314/",
             twitter: "https://x.com/ArjavJ_314/",
@@ -78,7 +79,7 @@ export const members: Member[] = [
         {
         id: "24JE0745",
         name: "Shayan Mondal ",
-        email: "shayanmondal122005@gmail.com ",
+        email: "24je0745@iitism.ac.in",
         contactNo: "9832126751",
         links: {
             linkedin: "https://www.linkedin.com/in/shayan-mondal-b7a120320",
@@ -144,7 +145,7 @@ export const members: Member[] = [
         yearOfGrad: "2028",
     },
     {
-        id: "24je0750",
+        id: "24JE0750",
         name: "Sumit Kumar",
         email: "24je0750@iitism.ac.in",
         contactNo: "9650154377",
@@ -156,7 +157,7 @@ export const members: Member[] = [
         yearOfGrad: "2028",
     },
     {
-        id: "24je1097",
+        id: "24JE1097",
         name: "Ojas Verma",
         email: "24je1097@iitism.ac.in",
         contactNo: "7568229799",
@@ -239,6 +240,55 @@ export const members: Member[] = [
         },
         img: null,
         yearOfGrad: "2028",
+    },
+    {
+        id: "24JE0349",
+        name: "Sudhanya Pati",
+        email: "24je0349@iitism.ac.inl",
+        contactNo: "6372175024",
+        links: {
+            linkedin: "https://www.linkedin.com/in/sudhanya-pati-274095321/",
+            instagram: "https://www.instagram.com/sudhanyyaa_18",
+        },
+        img: null,
+        yearOfGrad: "2028",
+    },
+    {
+        id: "24JE0729",
+        name: "Animesh Parashar",
+        email: "24je0729@iitism.ac.in",
+        contactNo: "9120222393",
+        links: {
+            github: "https://github.com/Animesh-Parashar",
+            linkedin: "https://www.linkedin.com/in/animesh-parashar-378659320/",
+        },
+        img: "animesh-parashar.jpg",
+        yearOfGrad: "2028",
+    },
+    {
+        id: "24JE0754",
+        name: "Vaidehi Shivram Hegde",
+        email: "24je0754@iitism.ac.in",
+        contactNo: "9731895711",
+        links: {
+            github: "https://github.com/S2V3",
+            linkedin: "https://www.linkedin.com/in/vaidehi-hegde-49440a320/",
+        },
+        img: "vaidehi-shivram-hegde.jpg",
+        yearOfGrad: "2028",
+    },
+    {
+        id: "24je1074",
+        name: "Kanishka Jain",
+        email: "24je1074@iitism.ac.in",
+        contactNo: "9829490865",
+        links: {
+            github: "http://www.github.com/Kanishkaajaiinn",
+            linkedin: "http://www.linkedin.com/in/kanishkaajaiinn",
+            instagram: "http://www.instagram.com/Kanishkaajaiinn",
+        },
+        img: "kanishka-jain.jpg",
+        yearOfGrad: "2029",
     },
     {
         id: "23JE0847",
@@ -354,7 +404,7 @@ export const members: Member[] = [
         contactNo: "8901139230",
         links: {
         },
-        img: null,
+        img: "hima-yadav.jpg",
         yearOfGrad: "2027",
     },
     {
@@ -370,7 +420,7 @@ export const members: Member[] = [
     },
     {
         id: "23JE0190",
-        name: "Ayan Aslam ",
+        name: "Ayan Aslam",
         email: "ayaninstudy10000@gmail.com",
         contactNo: "7987187558",
         links: {
@@ -388,9 +438,33 @@ export const members: Member[] = [
         contactNo: "+91-8240804459",
         links: {
             github: "https://github.com/AbhiZx18324",
-            linkedin: "https://www.linkedin.com/in/abhirup-adhikary/"
+            linkedin: "https://www.linkedin.com/in/abhirup-adhikary/",
         },
         img: "abhirup-adhikary.jpg",
+        yearOfGrad: "2026",
+    },
+    {
+        id: "22JE0873",
+        name: "Sarvesh Bhoyar",
+        email: "Sarveshkbhoyar2022@gmail.com",
+        contactNo: "9405437975",
+        links: {
+            github: "https://github.com/sarveshbhoyar22",
+            linkedin: "https://www.linkedin.com/in/sarvesh-bhoyar-711818239/",
+            instagram: "https://www.instagram.com/sarvesh_bhoyar_/profilecard/?igsh=MXExd3I1enNkcXloNQ==",
+            website: "https://sarvesh-bhoyar.onrender.com/",
+        },
+        img: "sarvesh-bhoyar.jpg",
+        yearOfGrad: "2026",
+    },
+    {
+        id: "22JE0291 ",
+        name: "Christy Harshitha Dakarapu",
+        email: "22je0291@iitism.ac.in",
+        contactNo: "9346582015",
+        links: {
+        },
+        img: "christy-harshitha.jpg",
         yearOfGrad: "2026",
     },
 ]
