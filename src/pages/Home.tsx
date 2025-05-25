@@ -20,7 +20,7 @@ const Home: React.FC = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex flex-col overflow-hidden">
   {/* Animation Background */}
-  <div className="absolute inset-0 z-0">
+  <div className="absolute inset-0 z-0 h-fill w-fill">
     {/* <Spline
       scene="https://prod.spline.design/mA0mWjz2Ka4vZU0T/scene.splinecode"
       
@@ -36,8 +36,8 @@ const Home: React.FC = () => {
   </div>
 
   {/* Hero content */}
-  <div className=" flex flex-col z-10 pointer-events-none ">
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex-grow flex flex-col justify-center items-center text-center pt-44 pb-32 md:pb-0">
+  <div className="relative min-h-screen flex flex-col">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 z-10 flex-grow flex flex-col justify-center items-center text-center pt-44 pb-32 md:pb-0">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -65,7 +65,7 @@ const Home: React.FC = () => {
 </section>
 
       {/* About Preview Section */}
-      <section className=" relative py-16 md:py-24 bg-space-primary  z-20 pt-24 pb-16" style={{ top: '-80px' }}>
+      <section className="py-16 md:py-24 bg-space-primary/30 backdrop-blur-sm">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
             title="About ASTC"
