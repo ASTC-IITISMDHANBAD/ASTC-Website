@@ -26,7 +26,7 @@ const Home: React.FC = () => {
       
     /> */}
     <video
-              src="../../assets/A-Star.mp4"
+              src="/assets/A-Star.mp4"
               autoPlay
               loop
               muted
