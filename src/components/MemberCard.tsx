@@ -7,9 +7,10 @@ import { motion } from 'framer-motion';
 interface MemberCardProps {
   member: Member;
   index: number;
+  delayModulus: number;
 }
 
-const MemberCard: React.FC<MemberCardProps> = ({member, index}) => {
+const MemberCard: React.FC<MemberCardProps> = ({member, index, delayModulus}) => {
   const links = member.links;
   return (
     <motion.div
@@ -17,7 +18,7 @@ const MemberCard: React.FC<MemberCardProps> = ({member, index}) => {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.4, delay: index * 0.1 }}
+      transition={{ duration: 0.4, delay: (index % delayModulus) * 0.1 }}
     >
       <div className="aspect-square overflow-hidden">
         <img
