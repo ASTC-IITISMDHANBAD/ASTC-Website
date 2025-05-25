@@ -18,6 +18,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
     { name: 'About', path: '/about' },
     { name: 'Events', path: '/events' },
     { name: 'Projects', path: '/projects' },
+    { name: 'Members', path: '/members'},
     { name: 'Join Us', path: '/join' },
     { name: 'Contact', path: '/contact' }
   ];
