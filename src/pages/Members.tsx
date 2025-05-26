@@ -10,10 +10,27 @@ const Members: React.FC = () => {
   }, []);
 
   const sortedMembers = [...members].sort((a, b) => {
-    const yearDiff = parseInt(a.yearOfGrad) - parseInt(b.yearOfGrad);
+    const yearDiff = parseInt(a.id.substring(0,2)) - parseInt(b.id.substring(0,2));
     if (yearDiff !== 0) return yearDiff;
     return a.name.localeCompare(b.name);
   });
+  
+  const [delayModulus, setDelayModulus] = React.useState(3);
+ 
+  const updateModulus = () => {
+    const width = window.innerWidth;
+    if (width >= 1024) setDelayModulus(3);
+    else if (width >= 768) setDelayModulus(2);
+    else setDelayModulus(1);
+  }
+
+  React.useEffect(() => {
+    updateModulus();
+    window.addEventListener('resize', updateModulus);
+    return () => {
+      window.removeEventListener('resize', updateModulus);
+    };
+  }, [updateModulus]);
 
   return (
     <div className='pt-20'>
@@ -52,7 +69,7 @@ const Members: React.FC = () => {
           <div className="container mx-auto px-4 sm:px-6 lg:px-20">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20">
               {sortedMembers.map((member, index) => (
-                <MemberCard key={member.id} member={member} index={index} />
+                <MemberCard key={member.id} member={member} index={index} delayModulus={delayModulus} />
               ))}
             </div>
           </div>
