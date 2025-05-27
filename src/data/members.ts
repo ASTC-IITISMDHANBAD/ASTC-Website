@@ -356,6 +356,50 @@ export const members: Member[] = [
         yearOfGrad: "2028",
     },
     {
+        id: "24JE0732",
+        name: "Fathima Minha",
+        email: "24je0732@iitism.ac.in",
+        contactNo: "9360099538",
+        links: {
+            linkedin: "https://www.linkedin.com/in/fathima-minha-b79409320/",
+        },
+        img: null,
+        yearOfGrad: "2028",
+    },
+    {
+        id: "24JE1005",
+        name: "Divy Sharma",
+        email: "24je1005@iitism.ac.in",
+        contactNo: "6392789151",
+        links: {
+            linkedin: "https://www.linkedin.com/in/divy-sharma-6a12aa321/",
+        },
+        img: null,
+        yearOfGrad: "2028",
+    },
+    {
+        id: "24JE0708",
+        name: "Thonta Eshwar Kumar",
+        email: "24je0708@iitism.ac.in",
+        contactNo: "9030037516",
+        links: {
+            linkedin: "https://www.linkedin.com/in/thonta-eshwar-kumar-858585331/",
+        },
+        img: null,
+        yearOfGrad: "2028",
+    },
+    {
+        id: "24JE0127",
+        name: "Kumireddi Sai Pragathi",
+        email: "24je0127@iitism.ac.in",
+        contactNo: "9440515829",
+        links: {
+            linkedin: "https://www.linkedin.com/in/kumireddy-sai-pragathi-a34583323/",
+        },
+        img: null,
+        yearOfGrad: "2028",
+    },
+    {
         id: "23JE0847",
         name: "Bobbili Nandagopal",
         email: "23je0248@iitism.ac.in",
