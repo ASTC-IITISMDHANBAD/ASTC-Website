@@ -94,7 +94,7 @@ const Home: React.FC = () => {
             >
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white leading-tight inset-20">
                 Exploring Beyond <br />
-                <span className="text-green"> The Stars</span>
+                <span className="text-accent"> The Stars</span>
               </h1>
               <p className="text-gray-300 text-lg my-6 mx-auto">
                 We are the Aeronautics and Space Technology Club (ASTC) of IIT ISM Dhanbad, dedicated to fostering innovation and exploration in aerospace technologies.
