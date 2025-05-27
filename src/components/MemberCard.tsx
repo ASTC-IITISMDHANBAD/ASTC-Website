@@ -31,7 +31,7 @@ const MemberCard: React.FC<MemberCardProps> = ({member, index, delayModulus}) =>
         { member.name }
       </h1>
       <div className="h-1 w-[40%] bg-space-accent"></div>
-      <div className="flex flex-wrap gap-x-4 gap-y-2 text-2xl py-6 max-w-[80%] justify-center">
+      <div className="flex flex-wrap gap-x-4 gap-y-2 text-2xl py-6 max-w-[90%] justify-center">
         {member.email && (
           <button
             onClick={() => navigator.clipboard.writeText(member.email ? member.email : "")}
