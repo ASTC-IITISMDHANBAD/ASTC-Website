@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useCallback } from 'react'; // Added useState, useCallback
 import { motion } from 'framer-motion';
 import { Rocket, Calendar, Users, Brain } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -6,58 +6,115 @@ import Spline from '@splinetool/react-spline';
 import Button from '../components/Button';
 import SectionTitle from '../components/SectionTitle';
 import { events } from '../data/events';
+import SpaceLoader from '../components/SpaceLoader'; // Import the loader
 
 const Home: React.FC = () => {
   const upcomingEvents = events.filter(event => event.isUpcoming).slice(0, 3);
+  const [isSceneLoading, setIsSceneLoading] = useState(true); // State to manage Spline loading
 
+  // Existing Spline logo hiding logic
   React.useEffect(() => {
     window.scrollTo(0, 0);
+    const tryHideSplineLogo = () => {
+      try {
+        const splineViewer = document.querySelector('spline-viewer');
+        if (splineViewer && splineViewer.shadowRoot) {
+          const logoEl = splineViewer.shadowRoot.getElementById('logo');
+          if (logoEl) {
+            logoEl.style.display = 'none';
+            return true;
+          }
+        }
+      } catch (error) {
+        console.warn('Could not access Spline shadow DOM, logo hiding might fail.', error);
+        return true;
+      }
+      return false;
+    };
+
+    if (isSceneLoading) return; // Don't try to hide logo if scene is still loading
+
+    if (tryHideSplineLogo()) return;
+    let attempts = 0;
+    const intervalId = setInterval(() => {
+      if (tryHideSplineLogo() || attempts >= 20) {
+        clearInterval(intervalId);
+      }
+      attempts++;
+    }, 500);
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [isSceneLoading]); // Re-run when isSceneLoading changes
+
+  const handleSplineLoad = useCallback(() => {
+    console.log('Spline scene loaded.');
+    setIsSceneLoading(false);
   }, []);
 
+  useEffect(() => {
+    // Safety net: if Spline doesn't load after a certain time, show content anyway
+    const safetyTimeout = setTimeout(() => {
+      if (isSceneLoading) { // Check if still loading
+        console.warn('Spline load timeout. Forcing content display.');
+        setIsSceneLoading(false);
+      }
+    }, 8000); // 8 seconds, adjust as needed (e.g., slightly longer than your 5s average)
+
+    return () => {
+      clearTimeout(safetyTimeout); // Important: clear the timeout on component unmount or if Spline loads
+    };
+  }, [isSceneLoading]); // Dependency array includes isSceneLoading to reset timeout if it somehow toggles
+
+
+  if (isSceneLoading) {
+    return <SpaceLoader />;
+  }
+
   return (
-    <div className="relative">
+    <div className="relative bg-space-dark">
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex flex-col overflow-hidden">
-  {/* Animation Background */}
-  <div className="absolute inset-0 z-0">
-    <Spline
-      scene="https://prod.spline.design/mA0mWjz2Ka4vZU0T/scene.splinecode"
-    />
-  </div>
-
-  {/* Hero content */}
-  <div className="relative min-h-screen flex flex-col z-10 pointer-events-none">
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex-grow flex flex-col justify-center items-center text-center pt-44 pb-32 md:pb-0">
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        className="w-full max-w-3xl pointer-events-auto"
-      >
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white leading-tight inset-20">
-          Exploring Beyond <br />
-          <span className="text-green"> The Stars</span>
-        </h1>
-        <p className="text-gray-300 text-lg my-6 mx-auto">
-          We are the Aeronautics and Space Technology Club (ASTC) of IIT ISM Dhanbad, dedicated to fostering innovation and exploration in aerospace technologies.
-        </p>
-        <div className="flex flex-wrap gap-4 justify-center">
-          <Link to="/about">
-            <Button variant="primary" size="lg">Discover ASTC</Button>
-          </Link>
-          <Link to="/join">
-            <Button variant="outline" size="lg">Join Us</Button>
-          </Link>
+      <section className="relative min-h-screen flex flex-col">
+        <div className="absolute inset-x-0 top-0 h-[calc(100vh+50px)] z-0">
+          <Spline
+            scene="https://prod.spline.design/mA0mWjz2Ka4vZU0T/scene.splinecode"
+            onLoad={handleSplineLoad} // Add the onLoad callback here
+          />
         </div>
-      </motion.div>
-    </div>
-  </div>
-</section>
+
+        {/* Hero content */}
+        <div className="relative min-h-screen flex flex-col z-10 pointer-events-none">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex-grow flex flex-col justify-center items-center text-center pt-44 pb-32 md:pb-0">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }} // Content animates in after Spline loads
+              className="w-full max-w-3xl pointer-events-auto"
+            >
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white leading-tight inset-20">
+                Exploring Beyond <br />
+                <span className="text-green"> The Stars</span>
+              </h1>
+              <p className="text-gray-300 text-lg my-6 mx-auto">
+                We are the Aeronautics and Space Technology Club (ASTC) of IIT ISM Dhanbad, dedicated to fostering innovation and exploration in aerospace technologies.
+              </p>
+              <div className="flex flex-wrap gap-4 justify-center">
+                <Link to="/about">
+                  <Button variant="primary" size="lg">Discover ASTC</Button>
+                </Link>
+                <Link to="/join">
+                  <Button variant="outline" size="lg">Join Us</Button>
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
 
       {/* About Preview Section */}
-      <section className="py-16 md:py-24 bg-space-primary/30 backdrop-blur-sm">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-16 md:py-24 bg-space-dark/30 backdrop-blur-2xl -mt-[20px] z-10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-[-50px]"> {/* This negative margin might need review */}
           <SectionTitle
             title="About ASTC"
             subtitle="At the Aeronautics and Space Technology Club (ASTC), we are passionate about space exploration, aeronautics engineering, and fostering a community of future aerospace innovators."
@@ -73,9 +130,8 @@ const Home: React.FC = () => {
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                animate={{ opacity: 1, y: 0 }} // Changed from whileInView for consistent load
+                transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }} // Added a base delay
                 className="bg-white/5 backdrop-blur-sm p-6 rounded-lg border border-white/10 hover:transform hover:-translate-y-1 transition-all duration-300"
               >
                 <div className="mb-4">{item.icon}</div>
@@ -93,7 +149,8 @@ const Home: React.FC = () => {
       </section>
 
       {/* Upcoming Events Section */}
-      <section className="py-16 md:py-24">
+      <section className="relative py-16 md:py-24 bg-space-primary z-10">
+        {/* ... content ... */}
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
             title="Upcoming Events"
@@ -105,9 +162,8 @@ const Home: React.FC = () => {
               <motion.div
                 key={event.id}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                animate={{ opacity: 1, y: 0 }} // Changed from whileInView
+                transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }} // Added a base delay
                 className="bg-white/5 backdrop-blur-sm rounded-lg overflow-hidden border border-white/10 hover:shadow-lg transition-all duration-300"
               >
                 <div className="h-48 overflow-hidden">
@@ -139,7 +195,8 @@ const Home: React.FC = () => {
       </section>
 
       {/* Join Us CTA */}
-      <section className="py-16 relative">
+      <section className="relative py-16 bg-space-primary z-10">
+        {/* ... content ... */}
         <div className="absolute inset-0 opacity-20 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-space-secondary to-space-primary"></div>
         </div>
@@ -148,25 +205,23 @@ const Home: React.FC = () => {
             <motion.h2
               className="text-3xl md:text-4xl font-display font-bold text-white mb-6"
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, y: 0 }} // Changed from whileInView
+              transition={{ duration: 0.5, delay: 0.5 }} // Added a base delay
             >
               Ready to Reach for the Stars?
             </motion.h2>
             <motion.p
               className="text-gray-300 text-lg mb-8"
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
+              animate={{ opacity: 1, y: 0 }} // Changed from whileInView
+              transition={{ duration: 0.5, delay: 0.6 }} // Added a base delay
             >
               Join the ASTC family and be part of exciting projects, events, and a community of space enthusiasts.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
+              animate={{ opacity: 1, y: 0 }} // Changed from whileInView
+              transition={{ duration: 0.5, delay: 0.7 }} // Added a base delay
             >
               <Link to="/join">
                 <Button variant="primary" size="lg">Join Us!</Button>
