@@ -1,14 +1,13 @@
-// src/components/SpaceLoader.tsx
+
 import React from 'react';
 
-// Helper to generate unique random-like orbital animation properties
-// for a specific body (planet or sun)
+
 const getBodyMotionStyle = (
-  index: number, // 0 for planet, 1-3 for suns
+  index: number, 
   isPlanet: boolean
 ) => {
-  const areaWidth = 160; // Define the max area width for motion (pixels)
-  const areaHeight = 160; // Define the max area height for motion (pixels)
+  const areaWidth = 160; 
+  const areaHeight = 160; 
 
   let size: number,
       duration: number,
@@ -17,48 +16,47 @@ const getBodyMotionStyle = (
       colorClass: string;
 
   if (isPlanet) {
-    size = 18 + Math.random() * 4; // Planet size: 18px to 22px
-    duration = Math.random() * 5 + 15; // Planet slower: 15s to 20s
-    baseOrbitRadius = 5; // Planet moves very little around its center
+    size = 18 + Math.random() * 4; 
+    duration = Math.random() * 5 + 15; 
+    baseOrbitRadius = 5;
     orbitRadiusVariance = 5;
     colorClass = 'bg-gradient-to-br from-blue-500 to-purple-600 border border-blue-300/70 shadow-lg';
   } else { // Suns
-    size = 12 + Math.random() * 6; // Sun size: 12px to 18px
-    duration = Math.random() * 6 + 7;  // Suns faster: 7s to 13s
-    baseOrbitRadius = 40; // Suns have a larger orbit base
+    size = 12 + Math.random() * 6; 
+    duration = Math.random() * 6 + 7;
+    baseOrbitRadius = 40;
     orbitRadiusVariance = 30;
-    // Assign different colors to suns for variety
+    
     const sunColors = ['bg-yellow-400 shadow-sun', 'bg-orange-500 shadow-sun', 'bg-red-500 shadow-sun'];
-    colorClass = sunColors[index -1] || sunColors[0]; // index 1,2,3 maps to 0,1,2
+    colorClass = sunColors[index -1] || sunColors[0];
   }
 
-  const delay = Math.random() * -duration; // Random negative delay to stagger start times
+  const delay = Math.random() * -duration;
   const orbitRadius = baseOrbitRadius + Math.random() * orbitRadiusVariance;
   
-  // For more random paths, we introduce control points for a Bezier-like wobble
-  // These define the "extent" of the random movement within the overall orbital path
-  const controlPoint1X = (Math.random() - 0.5) * areaWidth * 0.3; // Wobble within 30% of area
+  
+  const controlPoint1X = (Math.random() - 0.5) * areaWidth * 0.3; 
   const controlPoint1Y = (Math.random() - 0.5) * areaHeight * 0.3;
   const controlPoint2X = (Math.random() - 0.5) * areaWidth * 0.4;
   const controlPoint2Y = (Math.random() - 0.5) * areaHeight * 0.4;
 
-  const a = orbitRadius * (1 + Math.random() * 0.2 - 0.1); // Elliptical semi-major axis
-  const b = orbitRadius * (1 + Math.random() * 0.2 - 0.1); // Elliptical semi-minor axis
-  const angleOffset = Math.random() * 360; // Each body starts at a random angle
+  const a = orbitRadius * (1 + Math.random() * 0.2 - 0.1);
+  const b = orbitRadius * (1 + Math.random() * 0.2 - 0.1);
+  const angleOffset = Math.random() * 360;
   const rotationDirection = Math.random() > 0.5 ? 1 : -1;
 
 
   return {
     width: `${size}px`,
     height: `${size}px`,
-    animationName: `body-motion-${index}`, // Unique animation name
+    animationName: `body-motion-${index}`, 
     animationDuration: `${duration}s`,
     animationDelay: `${delay}s`,
-    animationTimingFunction: 'cubic-bezier(0.42, 0, 0.58, 1)', // Smoother than linear for randomness
+    animationTimingFunction: 'cubic-bezier(0.42, 0, 0.58, 1)',
     animationIterationCount: 'infinite',
-    animationDirection: 'alternate', // Make motion go back and forth slightly for more randomness
-    className: `absolute top-1/2 left-1/2 rounded-full ${colorClass}`, // Base classes
-    // Custom properties for keyframes
+    animationDirection: 'alternate',
+    className: `absolute top-1/2 left-1/2 rounded-full ${colorClass}`,
+  
     '--a': `${a}px`,
     '--b': `${b}px`,
     '--angle-offset': `${angleOffset}deg`,
@@ -89,8 +87,8 @@ const SpaceLoader: React.FC = () => {
           return (
             <div
               key={body.id}
-              className={styleProps.className} // Apply base classes
-              style={{ // Apply dynamic styles including animation
+              className={styleProps.className}
+              style={{
                 width: styleProps.width,
                 height: styleProps.height,
                 animationName: styleProps.animationName,
@@ -99,7 +97,7 @@ const SpaceLoader: React.FC = () => {
                 animationTimingFunction: styleProps.animationTimingFunction,
                 animationIterationCount: styleProps.animationIterationCount,
                 animationDirection: styleProps.animationDirection,
-                // Pass CSS custom properties
+          
                 '--a': styleProps['--a'],
                 '--b': styleProps['--b'],
                 '--angle-offset': styleProps['--angle-offset'],
@@ -108,7 +106,7 @@ const SpaceLoader: React.FC = () => {
                 '--cp1y': styleProps['--cp1y'],
                 '--cp2x': styleProps['--cp2x'],
                 '--cp2y': styleProps['--cp2y'],
-              } as React.CSSProperties } // Cast to satisfy TS for custom props
+              } as React.CSSProperties } 
             />
           );
         })}
@@ -118,7 +116,7 @@ const SpaceLoader: React.FC = () => {
         Cosmic Symphony Initializing...
       </p>
       <p className="mt-2 text-sm text-gray-400">
-        Observe the trisolaris motion.
+        Celestial mechanics at play.
       </p>
 
       {/* Inject dynamic keyframes using a style tag */}

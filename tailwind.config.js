@@ -30,12 +30,12 @@ export default {
       },
       boxShadow: {
         'lg': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
-        'sun': '0 0 15px 4px rgba(255, 220, 100, 0.5)', // For suns if needed (applied via className)
+        'sun': '0 0 15px 4px rgba(255, 220, 100, 0.5)', 
       },
       animation: {
-        'float': 'float 6s ease-in-out infinite', // Kept if used elsewhere
-        'twinkle': 'twinkle 4s ease-in-out infinite', // Kept if used elsewhere
-        'pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite', // For loader text
+        'float': 'float 6s ease-in-out infinite', 
+        'twinkle': 'twinkle 4s ease-in-out infinite', 
+        'pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite', 
       },
       keyframes: {
         float: {
