@@ -23,7 +23,7 @@ export const members: Member[] = [
             github: "https://github.com/pranavishvar",
             linkedin: "https://www.linkedin.com/in/pranavishvar-hariprakash-441a6431b/",
         },
-        img: null,
+        img: "pranavishvar.jpg",
         yearOfGrad: "2028",
     },
     {
@@ -49,7 +49,7 @@ export const members: Member[] = [
             github: "https://github.com/CyberSorcerer-real",
             linkedin: "https://www.linkedin.com/in/manas-lokhande-755342320/",
         },
-        img: null,
+        img: "manas-lokhande.jpg",
         yearOfGrad: "2028",
     },
     {
@@ -84,7 +84,7 @@ export const members: Member[] = [
         links: {
             linkedin: "https://www.linkedin.com/in/shayan-mondal-b7a120320",
         },
-        img: null,
+        img: "shayan-mondal.jpg",
         yearOfGrad: "2028",
     },
     {
@@ -141,7 +141,7 @@ export const members: Member[] = [
         links: {
             github: "https://github.com/neelamber-mishra",
         },
-        img: null,
+        img: "neelamber-mishra.jpg",
         yearOfGrad: "2028",
     },
     {
@@ -226,7 +226,7 @@ export const members: Member[] = [
         links: {
             linkedin: "https://www.linkedin.com/in/adriel-john-60b5a3320/",
         },
-        img: null,
+        img: "adriel-john.jpg",
         yearOfGrad: "2028",
     },
     {
@@ -238,7 +238,7 @@ export const members: Member[] = [
             github: "https://github.com/souhxrdya",
             linkedin: "https://www.linkedin.com/in/souhardya-talukdar-24b217320/",
         },
-        img: null,
+        img: "souhardya-talukdar.jpg",
         yearOfGrad: "2028",
     },
     {
@@ -326,7 +326,78 @@ export const members: Member[] = [
             instagram:"https://instagram.com/shubheaditya",
         },
         img: "shubhe-aditya.jpg",
-        yearOfGrad: "2028",
+        yearOfGrad: "2028",
+    },
+    {
+        id: "24JE0751",
+        name: "Mohana Priya Thinesh Kumar",
+        email: null,
+        contactNo: null,
+        links: {
+            github: "https://github.com/MohanaPriyaThineshKumar",
+            linkedin: "https://www.linkedin.com/in/mohana-priya-thinesh-kumar-048b82209/",
+            instagram: "https://www.instagram.com/mohanapriya.t_writes/",
+            website: "https://mohanapriyawrites.wixsite.com/newtonsapple",
+            medium: "https://mohanapriya-t.medium.com/",
+        },
+        img: "mohana-priya-thinesh-kumar.jpg",
+        yearOfGrad: "2028",
+    },
+    {
+        id: "24JE0898",
+        name: "Harish",
+        email: "24je0898@iitism.ac.in",
+        contactNo: "6398785814",
+        links: {
+            linkedin: "https://www.linkedin.com/in/harish-singh-096894318",
+            instagram: "https://www.instagram.com/harishk22267?igsh=cmpzM3M2dTMwM2ht",
+        },
+        img: null,
+        yearOfGrad: "2028",
+    },
+    {
+        id: "24JE0732",
+        name: "Fathima Minha",
+        email: "24je0732@iitism.ac.in",
+        contactNo: "9360099538",
+        links: {
+            linkedin: "https://www.linkedin.com/in/fathima-minha-b79409320/",
+        },
+        img: null,
+        yearOfGrad: "2028",
+    },
+    {
+        id: "24JE1005",
+        name: "Divy Sharma",
+        email: "24je1005@iitism.ac.in",
+        contactNo: "6392789151",
+        links: {
+            linkedin: "https://www.linkedin.com/in/divy-sharma-6a12aa321/",
+        },
+        img: null,
+        yearOfGrad: "2028",
+    },
+    {
+        id: "24JE0708",
+        name: "Thonta Eshwar Kumar",
+        email: "24je0708@iitism.ac.in",
+        contactNo: "9030037516",
+        links: {
+            linkedin: "https://www.linkedin.com/in/thonta-eshwar-kumar-858585331/",
+        },
+        img: null,
+        yearOfGrad: "2028",
+    },
+    {
+        id: "24JE0127",
+        name: "Kumireddi Sai Pragathi",
+        email: "24je0127@iitism.ac.in",
+        contactNo: "9440515829",
+        links: {
+            linkedin: "https://www.linkedin.com/in/kumireddy-sai-pragathi-a34583323/",
+        },
+        img: null,
+        yearOfGrad: "2028",
     },
     {
         id: "23JE0847",

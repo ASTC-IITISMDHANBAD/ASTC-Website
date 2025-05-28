@@ -67,7 +67,7 @@ const Members: React.FC = () => {
 
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-4 sm:px-6 lg:px-20">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 place-items-center">
               {sortedMembers.map((member, index) => (
                 <MemberCard key={member.id} member={member} index={index} delayModulus={delayModulus} />
               ))}
