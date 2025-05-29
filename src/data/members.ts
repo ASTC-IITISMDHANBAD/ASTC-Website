@@ -55,7 +55,7 @@ export const members: Member[] = [
     {
         id: "24JE0220",
         name: "Nishchay",
-        email: "nishchaykumar235@gmail.com",
+        email: "24je0220@iitism.ac.in",
         contactNo: null,
         links: {
             linkedin: "https://www.linkedin.com/in/nishchay-2410a4354/",
@@ -104,6 +104,7 @@ export const members: Member[] = [
         contactNo: null,
         links: {
             linkedin: "https://www.linkedin.com/in/yash-budvansh-191305272/",
+            instagram: "https://www.instagram.com/yashbvansh",
         },
         img: "yash-budvansh.jpg",
         yearOfGrad: "2028",
@@ -250,7 +251,7 @@ export const members: Member[] = [
             linkedin: "https://www.linkedin.com/in/sudhanya-pati-274095321/",
             instagram: "https://www.instagram.com/sudhanyyaa_18",
         },
-        img: null,
+        img: "sudhanya-pati.jpg",
         yearOfGrad: "2028",
     },
     {
@@ -416,6 +417,7 @@ export const members: Member[] = [
         email: "23je0498@iitism.ac.in",
         contactNo: "9492038399",
         links: {
+            github: "https://github.com/Dharmik10987",
             linkedin: "https://www.linkedin.com/in/korukonda-dharmik",
         },
         img: "korukonda-dharmik.jpg",
@@ -436,7 +438,7 @@ export const members: Member[] = [
     },
     {
         id: "23JE0847",
-        name: "Swapnil",
+        name: "Sai Swapnil Mishra",
         email: "23je0847@iitism.ac.in",
         contactNo: "7815092560",
         links: {
@@ -518,7 +520,7 @@ export const members: Member[] = [
     },
     {
         id: "23JE0663",
-        name: "Nookala Likitha",
+        name: "Likitha Nookala",
         email: "23je0663@iitism.ac.in",
         contactNo: "8897143364",
         links: {
@@ -538,6 +540,18 @@ export const members: Member[] = [
             instagram: "https://www.instagram.com/shut_up__ayan/"
         },
         img: "ayan-aslam.jpg",
+        yearOfGrad: "2027",
+    },
+    {
+        id: "23JE0826",
+        name: "Rohit Kumar R",
+        email: "23je0826@iitism.ac.in",
+        contactNo: "8637690882",
+        links: {
+            linkedin: "https://www.linkedin.com/in/rohit-kumar-r-1060b7287/",
+            github: "https://github.com/cosmo-nerd",
+        },
+        img: null,
         yearOfGrad: "2027",
     },
     {
@@ -576,4 +590,38 @@ export const members: Member[] = [
         img: "christy-harshitha.jpg",
         yearOfGrad: "2026",
     },
+    {
+        id: "22JE0399",
+        name: "Harshkumar Gupta",
+        email: "22je0399@iitism.ac.in",
+        contactNo: "9892718815",
+        links: {
+            github: "https://github.com/hkg-2424",
+            linkedin: "https://www.linkedin.com/in/harshkumar-gupta-98b452250/",
+        },
+        img: null,
+        yearOfGrad: "2027",
+    },
+    {
+        id: "22JE0665",
+        name: "Parth Dambhare",
+        email: "dambhareparth08@gmail.com",
+        contactNo: null,
+        links: {
+        },
+        img: null,
+        yearOfGrad: "2026",
+    },
+    {
+        id: "22JE0713",
+        name: "Pranav Sanjay Bhasakhetre",
+        email: "22je0713@iitism.ac.in",
+        contactNo: "7499951132",
+        links: {
+            linkedin: "https://www.linkedin.com/in/pranav-bhasakhetre-492783255?utm_source=share",
+            instagram: "https://www.instagram.com/pranavbhasakhetre",
+        },
+        img: "pranav-basakhetre.jpg",
+        yearOfGrad: "2026",
+  }
 ]

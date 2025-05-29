@@ -14,7 +14,7 @@ const MemberCard: React.FC<MemberCardProps> = ({member, index, delayModulus}) =>
   const links = member.links;
   return (
     <motion.div
-      className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 w-full flex flex-col items-center max-w-[70%] md:max-w-full lg:max-w-full"
+      className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 w-full flex flex-col items-center max-w-[70%] md:max-w-full h-full"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
