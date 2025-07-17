@@ -587,7 +587,7 @@ export const members: Member[] = [
         contactNo: "9346582015",
         links: {
         },
-        img: "christy-harshitha.jpg",
+        img: "",
         yearOfGrad: "2026",
     },
     {
