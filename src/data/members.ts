@@ -1,45 +1,9 @@
 import { Member } from "../types"
 
 export const members: Member[] = [
-    {
-        id: "24JE0728",
-        name: "Akshat Rai",
-        email: "24je0728@iitism.ac.in",
-        contactNo: "8107121718",
-        links: {
-            github: "https://github.com/AkshatRai07",
-            linkedin: "https://www.linkedin.com/in/akshat-rai-7b03ab31a/",
-            twitter: "https://x.com/AkshatRai007",
-        },
-        img: "akshat-rai.jpg",
-        yearOfGrad: "2028",
-    },
-    {
-        id: "24JE0740",
-        name: "Pranavishvar. H",
-        email: "24je0740@iitism.ac.in",
-        contactNo: "8807905766",
-        links: {
-            github: "https://github.com/pranavishvar",
-            linkedin: "https://www.linkedin.com/in/pranavishvar-hariprakash-441a6431b/",
-        },
-        img: "pranavishvar.jpg",
-        yearOfGrad: "2028",
-    },
-    {
-        id: "24JE0771",
-        name: "Arjav Jain",
-        email: "jainarjav1410@gmail.com",
-        contactNo: "7974386224",
-        links: {
-            github: "https://github.com/ArjavJain123",
-            linkedin: "https://www.linkedin.com/in/arjav-jain-b22476237/",
-            instagram: "https://www.instagram.com/arjavj_314/",
-            twitter: "https://x.com/ArjavJ_314/",
-        },
-        img: null,
-        yearOfGrad: "2028",
-    },
+   
+    
+   
     {
         id: "24JE0737",
         name: "Manas Lokhande",
@@ -52,18 +16,7 @@ export const members: Member[] = [
         img: "manas-lokhande.jpg",
         yearOfGrad: "2028",
     },
-    {
-        id: "24JE0220",
-        name: "Nishchay",
-        email: "24je0220@iitism.ac.in",
-        contactNo: null,
-        links: {
-            linkedin: "https://www.linkedin.com/in/nishchay-2410a4354/",
-            medium: "https://medium.com/@24je0220",
-        },
-        img: null,
-        yearOfGrad: "2028",
-    },
+    
     {
         id: "24JE1058",
         name: "Soumik Dutta",
@@ -87,28 +40,8 @@ export const members: Member[] = [
         img: "shayan-mondal.jpg",
         yearOfGrad: "2028",
     },
-    {
-        id: "24JE0342",
-        name: "Shruti Jha",
-        email: "24je0342@iitism.ac.in",
-        contactNo: null,
-        links: {
-        },
-        img: null,
-        yearOfGrad: "2028",
-    },
-    {
-        id: "24JE0528",
-        name: "Yash Budvansh",
-        email: "yashbvansh@gmail.com",
-        contactNo: null,
-        links: {
-            linkedin: "https://www.linkedin.com/in/yash-budvansh-191305272/",
-            instagram: "https://www.instagram.com/yashbvansh",
-        },
-        img: "yash-budvansh.jpg",
-        yearOfGrad: "2028",
-    },
+    
+    
     {
         id: "24JE0594",
         name: "Aryan Raj",
@@ -132,17 +65,6 @@ export const members: Member[] = [
             instagram: "https://www.instagram.com/soupiepanda/",
         },
         img: "subrat-panda.jpeg",
-        yearOfGrad: "2028",
-    },
-    {
-        id: "24JE0663",
-        name: "Neelamber Mishra",
-        email: "neelambermishra10@gmail.com",
-        contactNo: null,
-        links: {
-            github: "https://github.com/neelamber-mishra",
-        },
-        img: "neelamber-mishra.jpg",
         yearOfGrad: "2028",
     },
     {
@@ -183,19 +105,6 @@ export const members: Member[] = [
         yearOfGrad: "2028",
     },
     {
-        id: "24JE0678",
-        name: "Rahul Joshi",
-        email: "24je0678@iitism.ac.in",
-        contactNo: "9888237398",
-        links: {
-            github: "https://github.com/crypticsaiyan",
-            linkedin: "https://in.linkedin.com/in/rahul-joshi-059a882a7/",
-            instagram: "https://www.instagram.com/mightberahul",
-        },
-        img: "rahul-joshi.jpeg",
-        yearOfGrad: "2028",
-    },
-    {
         id: "24JE0613",
         name: "Dhanya Gautam",
         email: "24je0613@iitism.ac.in",
@@ -204,7 +113,7 @@ export const members: Member[] = [
             github: "https://github.com/twinking-tech",
             linkedin: "https://www.linkedin.com/in/dhanya-gautam-436394321/",
         },
-        img: null,
+        img: "dhanya-gautam.jpg",
         yearOfGrad: "2028",
     },
     {
@@ -292,19 +201,6 @@ export const members: Member[] = [
         yearOfGrad: "2029",
     },
     {
-        id: "24JE0380",
-        name: "Anshul Anand",
-        email: "anshulanind@gmail.com",
-        contactNo: "7061892852",
-        links: {
-            github: "https://github.com/Anshulanind",
-            linkedin: "https://www.linkedin.com/in/anshul-anand-83105a317/",
-            instagram: "https://www.instagram.com/ig_anshul_1igsh=OWpiOTlqdjVqeHdw",
-        },
-        img: null,
-        yearOfGrad: "2028",
-    },
-    {
         id: "24JE1084",
         name: "Utkarsh Sharma",
         email: "24je1084@iitism.ac.in",
@@ -315,45 +211,6 @@ export const members: Member[] = [
             instagram: "https://www.instagram.com/utkarsh_5450igsh=MTNmZzFpdmtvZTI2OQ==",
         },
         img: "utkarsh-sharma.jpg",
-        yearOfGrad: "2028",
-    },
-    {
-        id: "24JE0965",
-        name: "Shubhe Aditya",
-        email: "24je0974@iitism.ac.in",
-        contactNo: "9875120141",
-        links: {
-            linkedin: "https://www.linkedin.com/in/shubhe-aditya-584830313/",
-            instagram:"https://instagram.com/shubheaditya",
-        },
-        img: "shubhe-aditya.jpg",
-        yearOfGrad: "2028",
-    },
-    {
-        id: "24JE0751",
-        name: "Mohana Priya Thinesh Kumar",
-        email: null,
-        contactNo: null,
-        links: {
-            github: "https://github.com/MohanaPriyaThineshKumar",
-            linkedin: "https://www.linkedin.com/in/mohana-priya-thinesh-kumar-048b82209/",
-            instagram: "https://www.instagram.com/mohanapriya.t_writes/",
-            website: "https://mohanapriyawrites.wixsite.com/newtonsapple",
-            medium: "https://mohanapriya-t.medium.com/",
-        },
-        img: "mohana-priya-thinesh-kumar.jpg",
-        yearOfGrad: "2028",
-    },
-    {
-        id: "24JE0898",
-        name: "Harish",
-        email: "24je0898@iitism.ac.in",
-        contactNo: "6398785814",
-        links: {
-            linkedin: "https://www.linkedin.com/in/harish-singh-096894318",
-            instagram: "https://www.instagram.com/harishk22267?igsh=cmpzM3M2dTMwM2ht",
-        },
-        img: null,
         yearOfGrad: "2028",
     },
     {
@@ -374,28 +231,6 @@ export const members: Member[] = [
         contactNo: "6392789151",
         links: {
             linkedin: "https://www.linkedin.com/in/divy-sharma-6a12aa321/",
-        },
-        img: null,
-        yearOfGrad: "2028",
-    },
-    {
-        id: "24JE0708",
-        name: "Thonta Eshwar Kumar",
-        email: "24je0708@iitism.ac.in",
-        contactNo: "9030037516",
-        links: {
-            linkedin: "https://www.linkedin.com/in/thonta-eshwar-kumar-858585331/",
-        },
-        img: null,
-        yearOfGrad: "2028",
-    },
-    {
-        id: "24JE0127",
-        name: "Kumireddi Sai Pragathi",
-        email: "24je0127@iitism.ac.in",
-        contactNo: "9440515829",
-        links: {
-            linkedin: "https://www.linkedin.com/in/kumireddy-sai-pragathi-a34583323/",
         },
         img: null,
         yearOfGrad: "2028",
