@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Rocket, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 interface NavbarProps {
@@ -13,13 +13,15 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
+  // ✅ Added "Recruitment" link below
   const navItems = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Events', path: '/events' },
     { name: 'Projects', path: '/projects' },
-    { name: 'Members', path: '/members'},
+    { name: 'Members', path: '/members' },
     { name: 'Join Us', path: '/join' },
+    { name: 'Recruitment', path: '/recruitment' }, // 👈 New link here
     { name: 'Contact', path: '/contact' }
   ];
 
@@ -38,9 +40,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
             className="flex items-center gap-2 text-space-accent hover:text-space-light transition-colors"
             onClick={closeMenu}
           >
-            {/* <Rocket size={28} className="text-space-accent" /> */}
             <img src="/logo/astc_logo.png" alt="Logo" className="w-20 h-20" />
-            
           </NavLink>
 
           {/* Desktop Navigation */}

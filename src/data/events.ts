@@ -8,17 +8,17 @@ export const events: Event[] = [
     location: "Penmen Auditorium, IIT ISM Dhanbad",
     description: "Experience the wonders of space through the cinematic masterpiece 'Interstellar'. Join us for an unforgettable journey across the cosmos!",
     image: "/2840376.jpg",
-    isUpcoming: true,
+    isUpcoming: false,
     // registrationLink: "#"
   },
   {
     id: 2,
-    title: "Code the Cosmos",
+    title: "Code the Cosmwos",
     date: "October 11th, 2025 [3:00 PM - 6:00 PM]",
     location: "NLHC , IIT ISM Dhanbad",
     description: "Experience the wonders of space through the cinematic masterpiece 'Interstellar'. Join us for an unforgettable journey across the cosmos!",
     image: "/Code-the-Cosmos-Poster[1].png",
-    isUpcoming: true,
+    isUpcoming: false,
     // registrationLink: "#"
   },
   {
