@@ -5,9 +5,9 @@ import Navbar from "../components/Navbar";
 import PSSection from "../components/PSSection";
 
 const psList = [
-  { name: "1. Star and Galaxy Classification ", pdfUrl: "/pdfs/ps1.docx" },
-  { name: "2. Transient vs Non-Transient Detection ", pdfUrl: "/pdfs/ps2.docx" },
-  { name: "3. Solar Flare Prediction ", pdfUrl: "/pdfs/ps3.docx" },
+  { name: "1. Star and Galaxy Classification ", pdfUrl: "/pdfs/ps1.pdf" },
+  { name: "2. Transient vs Non-Transient Detection ", pdfUrl: "/pdfs/ps2.pdf" },
+  { name: "3. Solar Flare Prediction ", pdfUrl: "/pdfs/ps3.pdf" },
   { name: "4. Design an opmal subsystem on LTSpice ", pdfUrl: "/pdfs/ps4.pdf" },
   { name: "5. Program and integrate an ESP32 microcontroller", pdfUrl: "/pdfs/ps5.pdf" },
   { name: "6. 3D Modeling & Animation of Computer Cooling Fan", pdfUrl: "/pdfs/ps6.pdf" },
@@ -149,9 +149,12 @@ const Recruitment: React.FC = () => {
           className="w-full bg-space-dark/50 border border-space-accent/30 text-white rounded-xl px-[14px] py-[10px] mb-[14px] focus:outline-none focus:border-space-accent transition"
         >
           <option value="" disabled hidden>Select PS</option>
-          <option value="PS1">Star and Galaxy Classification</option>
-          <option value="PS2">Transient vs Non-Transient Detection</option>
-          <option value="PS3">Solar Flare Prediction</option>
+          <option value="Star and Galaxy Classification">Star and Galaxy Classification</option>
+          <option value="Transient vs Non-Transient Detection">Transient vs Non-Transient Detection</option>
+          <option value="Solar Flare Prediction">Solar Flare Prediction</option>
+          <option value="Design an opmal subsystem on LTSpice">Design an opmal subsystem on LTSpice</option>
+          <option value="Program and integrate an ESP32 microcontroller">Program and integrate an ESP32 microcontroller</option>
+          <option value="3D Modeling & Animation of Computer Cooling Fan">3D Modeling & Animation of Computer Cooling Fan</option>
         </select>
 
         {/* Submit Button */}
