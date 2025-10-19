@@ -18,7 +18,7 @@ function App() {
         <Route path="events" element={<Events />} />
         <Route path="projects" element={<Projects />} />
         <Route path="members" element={<Members />} />
-        <Route path="join" element={<Join />} />
+        {/* <Route path="join" element={<Join />} /> */}
         <Route path="contact" element={<Contact />} />
         <Route path="recruitment" element={<RecruitmentForm />} /> {/* ✅ new route */}
       </Route>
