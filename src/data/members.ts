@@ -255,20 +255,7 @@ export const members: Member[] = [
     img: "korukonda-dharmik.jpg",
     yearOfGrad: "2027",
   },
-  {
-    id: "23JE0699",
-    name: "Pathan Gulamgaush",
-    email: "23je0699@iitism.ac.in",
-    contactNo: "8758964805",
-    links: {
-      github: "https://github.com/UchihaDZoro",
-      linkedin: "https://www.linkedin.com/in/gulamgaush-pathan",
-      instagram:
-        "https://www.instagram.com/gulamgaush_pathanigsh=Y2swbHpkeXg5NXQ3",
-    },
-    img: "pathan-gulamgaush.jpg",
-    yearOfGrad: "2027",
-  },
+  
   {
     id: "23JE0847",
     name: "Sai Swapnil Mishra",
@@ -278,15 +265,7 @@ export const members: Member[] = [
     img: null,
     yearOfGrad: "2027",
   },
-  {
-    id: "23JE0971",
-    name: "Sucheta Ghosal",
-    email: "23je0971@iitism.ac.in",
-    contactNo: "8918815184",
-    links: {},
-    img: null,
-    yearOfGrad: "2027",
-  },
+
   {
     id: "23JE0076",
     name: "Vidya Shree",
