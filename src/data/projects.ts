@@ -3,7 +3,7 @@ import { Project } from '../types';
 export const projects: Project[] = [
   {
     id: 1,
-    title: "The missed giants found binaries : A tale of Black home hunting",
+    title: "The missed giants found binaries : A tale of Black hole hunting",
     description: "Our main goal is to trace down anomaly globular clusters across the galaxy in search of Intermediate mass black holes using machine learning techniques and multiple electromagnetic radiation analysis.",
     image: "/R.jpeg",
     category: "Data driven astronomy",
