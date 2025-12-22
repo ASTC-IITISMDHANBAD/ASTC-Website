@@ -13,7 +13,7 @@ export const events: Event[] = [
   },
   {
     id: 2,
-    title: "Code the Cosmwos",
+    title: "Code the Cosmos",
     date: "October 11th, 2025 [3:00 PM - 6:00 PM]",
     location: "NLHC , IIT ISM Dhanbad",
     description: "Experience the wonders of space through the cinematic masterpiece 'Interstellar'. Join us for an unforgettable journey across the cosmos!",
