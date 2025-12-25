@@ -215,7 +215,7 @@ const Contact: React.FC = () => {
                     {
                       icon: <Instagram size={24} />,
                       label: "Instagram",
-                      link: "https://www.instagram.com/arka_iit_ism?igsh=YjU1MHo1OTF5bDRp",
+                      link: "https://www.instagram.com/astc_iitism/",
                     },
                     {
                       icon: <Linkedin size={24} />,
