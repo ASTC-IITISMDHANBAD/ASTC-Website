@@ -95,7 +95,7 @@ const Projects: React.FC = () => {
                 description: "Our team is developing innovative propulsion systems for small satellites, focusing on electric propulsion technologies that can significantly extend the operational lifetime of CubeSats and enable new mission capabilities.",
                 achievements: [
                   "Will Publish paper in the International Journal of Space Propulsion",
-                  "To Develope a prototype that will achieve 15% higher efficiency than conventional systems",
+                  "To Develop a prototype that will achieve 15% higher efficiency than conventional systems",
                   "Collaboration with national aerospace laboratory for testing"
                 ]
               },
@@ -105,7 +105,7 @@ const Projects: React.FC = () => {
                 achievements: [
                   "To launch 5 high-altitude balloons in the next two years",
                   "To share Data with meteorological department for research purposes",
-                  "Develope custom sensors for specialized data collection"
+                  "Develop custom sensors for specialized data collection"
                 ]
               }
             ].map((item, index) => (
