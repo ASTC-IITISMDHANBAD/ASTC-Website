@@ -68,7 +68,7 @@ const Footer: React.FC = () => {
             <h3 className="text-white font-bold mb-4">Follow Us</h3>
             <div className="flex gap-4">
               <a
-                href="https://www.instagram.com/arka_iit_ism?igsh=YjU1MHo1OTF5bDRp"
+                href="https://www.instagram.com/astc_iitism/"
                 aria-label="Instagram"
                 className="text-gray-300 hover:text-space-accent transition-colors"
               >
