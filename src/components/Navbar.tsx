@@ -13,15 +13,12 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
-  // ✅ Added "Recruitment" link below
   const navItems = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Events', path: '/events' },
     { name: 'Projects', path: '/projects' },
     { name: 'Members', path: '/members' },
-    // { name: 'Join Us', path: '/join' },
-    { name: 'Recruitment', path: '/recruitment' }, // 👈 New link here
     { name: 'Contact', path: '/contact' }
   ];
 
