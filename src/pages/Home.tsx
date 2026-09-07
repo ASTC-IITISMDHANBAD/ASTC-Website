@@ -56,11 +56,8 @@ const Home: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }} // Content animates in after Spline loads
               className="w-full max-w-3xl pointer-events-auto"
-            >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white leading-tight inset-20"><br />
-                <span className="text-accent"></span>
-              </h1>
-              <p className="text-gray-300 text-lg my-6 mx-auto"></p>
+            > 
+            {/* Removed the text from here that was interfering with the cursor and blocking the spline animation */}
               <div className="flex flex-wrap gap-4 justify-center">
                 <Link to="/about">
                   <Button variant="primary" size="lg">Discover ASTC</Button>
