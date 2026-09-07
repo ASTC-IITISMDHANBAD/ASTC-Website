@@ -202,7 +202,7 @@ const Contact: React.FC = () => {
                     <p className="text-gray-300">
                       Saturday: 10:00 AM - 5:00 PM
                     </p>
-                    <p className="text-gray-300">Sunday: 10:00 AM to 5:00 PM</p>
+                    <p className="text-gray-300">Sunday: 10:00 AM - 5:00 PM</p>
                   </div>
                 </motion.div>
               </div>
