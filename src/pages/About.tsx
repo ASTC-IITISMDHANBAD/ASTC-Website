@@ -213,7 +213,7 @@ const About: React.FC = () => {
                   description: "During the pandemic, ASTC shifted to virtual workshops and webinars, expanding its reach."
                 },
                 {
-                  year: "2022- 2024- Present",
+                  year: "2022- Present",
                   title: "Growth and Innovation",
                   description: "ASTC has grown to become active technical clubs at IIT ISM Dhanbad, with multiple ongoing projects and collaborations with industry partners."
                 },
