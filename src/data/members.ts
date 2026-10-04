@@ -3,6 +3,150 @@ import { Member } from "../types"
 export const members: Member[] = [
 	
 	
+  {
+    "id": "23JE0847",
+    "name": "Bobbili Nandagopal",
+    "email": "23je0248@iitism.ac.in",
+    "contactNo": "7036480245",
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/nandagopal-bobbili"
+    },
+    "img": null,
+    "yearOfGrad": "2027"
+  },
+  
+  {
+    "id": "23JE0076",
+    "name": "Vidya Shree",
+    "email": "23je0076@iitism.ac.in",
+    "contactNo": null,
+    "links": {},
+    "img": null,
+    "yearOfGrad": "2027"
+  },
+  {
+    "id": "23JE1034",
+    "name": "Shyamsri TS",
+    "email": "23je1034@iitism.ac.in",
+    "contactNo": "6302025136",
+    "links": {},
+    "img": null,
+    "yearOfGrad": "2027"
+  },
+  {
+    "id": "23JE0670",
+    "name": "Nithya Sahasra",
+    "email": "23je0670@iitism.ac.in",
+    "contactNo": null,
+    "links": {},
+    "img": null,
+    "yearOfGrad": "2027"
+  },
+  
+  {
+    "id": "23JE0872",
+    "name": "Abhishek Saranga",
+    "email": "23je0872@iitism.ac.in",
+    "contactNo": "7075978399",
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/abhishek-saranga-aa0508287/"
+    },
+    "img": null,
+    "yearOfGrad": "2027"
+  },
+  
+  {
+    "id": "23JE0663",
+    "name": "Likitha Nookala",
+    "email": "23je0663@iitism.ac.in",
+    "contactNo": "8897143364",
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/likitha-nookala-279909289"
+    },
+    "img": null,
+    "yearOfGrad": "2027"
+  },
+ 
+  {
+    "id": "22JE0028",
+    "name": "Abhirup Adhikary",
+    "email": "abhirup.adhikary2004@gmail.com",
+    "contactNo": "+91-8240804459",
+    "links": {
+      "github": "https://github.com/AbhiZx18324",
+      "linkedin": "https://www.linkedin.com/in/abhirup-adhikary/"
+    },
+    "img": "abhirup-adhikary.jpg",
+    "yearOfGrad": "2026"
+  },
+  {
+    "id": "22JE0873",
+    "name": "Sarvesh Bhoyar",
+    "email": "Sarveshkbhoyar2022@gmail.com",
+    "contactNo": "9405437975",
+    "links": {
+      "github": "https://github.com/sarveshbhoyar22",
+      "linkedin": "https://www.linkedin.com/in/sarvesh-bhoyar-711818239/",
+      "instagram": "https://www.instagram.com/sarvesh_bhoyar_/profilecard/igsh=MXExd3I1enNkcXloNQ==",
+      "website": "https://sarvesh-bhoyar.onrender.com/"
+    },
+    "img": "sarvesh-bhoyar.jpg",
+    "yearOfGrad": "2026"
+  },
+  {
+    "id": "22JE0291",
+    "name": "Christy Harshitha Dakarapu",
+    "email": "22je0291@iitism.ac.in",
+    "contactNo": "9346582015",
+    "links": {},
+    "img": null,
+    "yearOfGrad": "2026"
+  },
+  {
+    "id": "22JE0399",
+    "name": "Harshkumar Gupta",
+    "email": "22je0399@iitism.ac.in",
+    "contactNo": "9892718815",
+    "links": {
+      "github": "https://github.com/hkg-2424",
+      "linkedin": "https://www.linkedin.com/in/harshkumar-gupta-98b452250/"
+    },
+    "img": null,
+    "yearOfGrad": "2027"
+  },
+  {
+    "id": "22JE0665",
+    "name": "Parth Dambhare",
+    "email": "dambhareparth08@gmail.com",
+    "contactNo": null,
+    "links": {},
+    "img": null,
+    "yearOfGrad": "2026"
+  },
+  {
+    "id": "22JE0000",
+    "name": "Vinit Bodhe",
+    "email": null,
+    "contactNo": null,
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/vinitsbodhe/"
+    },
+    "img": "vinit.png",
+    "yearOfGrad": "2026"
+  },
+  {
+    "id": "22JE0713",
+    "name": "Pranav Sanjay Bhasakhetre",
+    "email": "22je0713@iitism.ac.in",
+    "contactNo": "7499951132",
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/pranav-bhasakhetre-492783255?utm_source=share",
+      "instagram": "https://www.instagram.com/pranavbhasakhetre"
+    },
+    "img": "pranav-basakhetre.jpg",
+    "yearOfGrad": "2026"
+  }
+,
 	{
 		id: "25JE0802",
 		name: "Shreya Mittal",
@@ -29,7 +173,7 @@ export const members: Member[] = [
 			instagram: "https://www.instagram.com/sau_mya_14/",
 			twitter: "https://x.com/somlo1406?t=-7L2jhmZ7s5h29botWTOgQ&s=09"
 		},
-		img: " saumya.jpg ",
+		img: null,
 		yearOfGrad: "2029",
 	},
 	
@@ -56,7 +200,7 @@ export const members: Member[] = [
 			linkedin: "https://www.linkedin.com/in/mayuresh-bhor-0415ab378",
 			instagram: "https://www.instagram.com/mb_bhor007?igsh=MWVuNWVoampuYXhuNA==",
 		},
-		img: " ",
+		img: null,
 		yearOfGrad: "2029",
 	},
 	
@@ -199,7 +343,7 @@ export const members: Member[] = [
 			github: "https://github.com/KavyanshuSingh",
 			linkedin: "https://www.linkedin.com/in/kavyanshu-singh-68b734373",
 		},
-		img: " ",
+		img: null,
 		yearOfGrad: "2029",
 	},
 	
@@ -230,7 +374,7 @@ export const members: Member[] = [
 			instagram: "https://www.instagram.com/sunny_and_bunny2020/",
 			twitter: "https://x.com/sunnyandbunny",
 		},
-		img: "Arindam.jpg",
+		img: null,
 		yearOfGrad: "2029",
 	},
 	

@@ -9,11 +9,41 @@ const Members: React.FC = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const sortedMembers = [...members].sort((a, b) => {
-    const yearDiff = parseInt(a.id.substring(0,2)) - parseInt(b.id.substring(0,2));
-    if (yearDiff !== 0) return yearDiff;
-    return a.name.localeCompare(b.name);
-  });
+  const leadershipPosts: Record<string, string> = {
+    "Subrat Panda": "Coordinator",
+    "Animesh Parashar": "Co-coordinator",
+    "Manas Lokhande": "Data-Driven Division Head",
+    "Shayan Mondal": "Theoretical Division Head",
+    "Shreyansh Nema": "Electronics Division Head",
+    "Dhanya Gautam": "Content Head",
+  };
+
+  const getPost = (member: typeof members[number]) => {
+    if (leadershipPosts[member.name]) return leadershipPosts[member.name];
+    if (member.id.startsWith("23JE") || member.id === "22JE0399") return "Contributor";
+    if (member.id.startsWith("22JE")) return "Advisor";
+    return "Member";
+  };
+
+  const postOrder = [
+    "Coordinator",
+    "Co-coordinator",
+    "Data-Driven Division Head",
+    "Theoretical Division Head",
+    "Electronics Division Head",
+    "Content Head",
+    "Contributor",
+    "Advisor",
+    "Member",
+  ];
+
+  const sortedMembers = members
+    .map((member) => ({ ...member, post: getPost(member) }))
+    .sort((a, b) => {
+      const postDiff = postOrder.indexOf(a.post) - postOrder.indexOf(b.post);
+      if (postDiff !== 0) return postDiff;
+      return a.name.localeCompare(b.name);
+    });
   
   const [delayModulus, setDelayModulus] = React.useState(3);
  

@@ -115,6 +115,71 @@ const About: React.FC = () => {
         </div>
       </section>
 
+      {/* Collaborators & Sponsors */}
+      <section className="py-16 md:py-24 bg-space-primary/20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionTitle
+            title="Our Collaborators & Sponsors"
+            subtitle="Proudly supported by organizations that help us reach for the stars"
+            light={true}
+          />
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-12 max-w-4xl mx-auto justify-items-center">
+            {[
+              { name: "IUCAA", src: "/assets/IUCAA.jpeg" },
+              { name: "NVCTI", src: "/assets/NVCTI.jpeg" },
+              { name: "Nebula", src: "/assets/NEBULA.png" },
+            ].map((partner) => (
+              <div
+                key={partner.name}
+                className="min-h-32 rounded-lg border border-white/10 bg-white/5 p-6 flex items-center justify-center"
+              >
+                <img
+                  src={partner.src}
+                  alt={`${partner.name} logo`}
+                  className="max-h-20 max-w-full object-contain"
+                  onError={(event) => {
+                    event.currentTarget.style.display = "none";
+                    event.currentTarget.parentElement?.insertAdjacentHTML(
+                      "beforeend",
+                      `<span class=\"text-space-accent font-semibold text-center\">${partner.name} logo</span>`
+                    );
+                  }}
+                />
+              </div>
+            ))}
+          </div>
+
+          <div className="max-w-3xl mx-auto mt-10 rounded-lg border border-space-accent/30 bg-space-dark/40 p-6 text-center">
+            <p className="text-gray-300">
+              <a
+                href="https://www.nebulaspaceorg.com/"
+                target="_blank"
+                rel="noreferrer"
+                className="text-space-accent font-semibold hover:text-white transition-colors"
+              >
+                Nebula Space Organization
+              </a>{" "}
+              proudly sponsored <span className="text-white font-semibold">Code the Cosmos 2025</span>.
+            </p>
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-white text-xl font-semibold mb-4">
+              Want to sponsor us?
+            </p>
+            <a
+              href="https://canva.link/2gw5kc6jc4ecu86"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center rounded-md bg-space-accent px-6 py-3 font-semibold text-space-dark hover:bg-white transition-colors"
+            >
+              View Sponsorship Brochure
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* History */}
       <section className="py-16 md:py-24 bg-space-primary/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -193,6 +258,7 @@ const About: React.FC = () => {
           </div>
         </div>
       </section>
+
     </div>
   );
 };

@@ -14,24 +14,29 @@ const MemberCard: React.FC<MemberCardProps> = ({member, index, delayModulus}) =>
   const links = member.links;
   return (
     <motion.div
-      className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 w-full flex flex-col items-center max-w-[70%] md:max-w-full h-full"
+      className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 w-full flex flex-col items-center max-w-[70%] md:max-w-full min-h-[590px] h-full"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.4, delay: (index % delayModulus) * 0.1 }}
     >
-      <div className="aspect-square overflow-hidden">
+      <div className="w-full h-80 overflow-hidden flex-shrink-0 bg-black/10 flex items-center justify-center">
         <img
           src={member.img ? `/Members/${member.img}` : "/default-profile-icon.png"}
           alt={member.name}
-          className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+          className="w-full h-full object-contain transition-transform duration-500 hover:scale-105"
         />
       </div>
-      <h1 className='text-3xl font-display font-bold text-white my-5 text-center max-w-[80%]'>
+      <h1 className='text-3xl font-display font-bold text-white mt-5 mb-3 text-center max-w-[80%]'>
         { member.name }
       </h1>
+      {member.post && (
+        <p className="text-space-accent font-semibold text-center px-4 mb-4">
+          {member.post}
+        </p>
+      )}
       <div className="h-1 w-[40%] bg-space-accent"></div>
-      <div className="flex flex-wrap gap-x-4 gap-y-2 text-2xl py-6 max-w-[90%] justify-center">
+      <div className="flex flex-wrap gap-x-4 gap-y-2 text-2xl pt-6 pb-6 mt-auto max-w-[90%] justify-center">
         {member.email && (
           <button
             onClick={() => navigator.clipboard.writeText(member.email ? member.email : "")}
