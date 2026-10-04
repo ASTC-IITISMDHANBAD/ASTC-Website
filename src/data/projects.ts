@@ -5,7 +5,7 @@ export const projects: Project[] = [
     id: 1,
     title: "Gravitational Wave Detection",
     description: "Goal is to develop a pipeline to detect simulated compact-binary gravitational-wave signals embedded in real LIGO detector noise. The project involved signal processing, data synthesis, and machine learning techniques to distinguish gravitational-wave signals from background noise through binary classification.",
-    image: "",
+    image: "/assets/Gravitational Wave Detection.jpg",
     category: "Data Driven Astronomy",
     
   },
@@ -13,7 +13,7 @@ export const projects: Project[] = [
     id: 2,
     title: "Forecasting and Nowcasting of solar flares",
     description: "The project aims to develop an automated pipeline to extract meaningful features from Aditya-L1 SoLEXS and HEL1OS telemetry and implement physics-informed flare detection and classification. The resulting flare catalogs will be used to train machine learning models to forecast solar flare classes in advance.",
-    image: "",
+    image: "/assets/Forecasting and Nowcasting of solar flares.webp",
     category: "Data Driven Astronomy",
     
   },
@@ -21,7 +21,7 @@ export const projects: Project[] = [
     id: 3,
     title: "Galaxy Image Deconvolution using diffusion models",
     description: "The project aims to restore fine morphological features in blurry galaxy images using diffusion models and Diffusion Posterior Sampling (DPS). It involves benchmarking against classical deconvolution methods and evaluating the model’s ability to generalise to real telescope observations.",
-    image: "",
+    image: "/assets/Galaxy Image Deconvolution using diffusion models.jpg",
     category: "Data Driven Astronomy",
     
   },
@@ -30,7 +30,7 @@ export const projects: Project[] = [
     title: "The missed giants found binaries : A tale of Black hole hunting",
     description: "Our main goal is to trace down anomaly globular clusters across the galaxy in search of Intermediate mass black holes using machine learning techniques and multiple electromagnetic radiation analysis.",
     image: "/R.jpeg",
-    category: "Data driven astronomy",
+    category: "Data Driven Astronomy",
     
   },
   {

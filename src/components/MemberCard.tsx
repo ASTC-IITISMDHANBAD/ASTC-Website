@@ -20,7 +20,7 @@ const MemberCard: React.FC<MemberCardProps> = ({member, index, delayModulus}) =>
       viewport={{ once: true }}
       transition={{ duration: 0.4, delay: (index % delayModulus) * 0.1 }}
     >
-      <div className="w-full h-80 overflow-hidden flex-shrink-0 bg-black/10 flex items-center justify-center">
+      <div className="w-full h-100 overflow-hidden flex-shrink-0 bg-black/10 flex items-center justify-center">
         <img
           src={member.img ? `/Members/${member.img}` : "/default-profile-icon.png"}
           alt={member.name}
@@ -30,13 +30,14 @@ const MemberCard: React.FC<MemberCardProps> = ({member, index, delayModulus}) =>
       <h1 className='text-3xl font-display font-bold text-white mt-5 mb-3 text-center max-w-[80%]'>
         { member.name }
       </h1>
-      {member.post && (
-        <p className="text-space-accent font-semibold text-center px-4 mb-4">
-          {member.post}
-        </p>
-      )}
-      <div className="h-1 w-[40%] bg-space-accent"></div>
-      <div className="flex flex-wrap gap-x-4 gap-y-2 text-2xl pt-6 pb-6 mt-auto max-w-[90%] justify-center">
+      <div className="mt-auto flex flex-col items-center w-full">
+        <div className="h-1 w-[40%] bg-space-accent"></div>
+        {member.post && (
+          <p className="text-space-accent font-semibold text-center px-4 mt-4">
+            {member.post}
+          </p>
+        )}
+        <div className="flex flex-wrap gap-x-4 gap-y-2 text-2xl pt-4 pb-6 max-w-[90%] justify-center">
         {member.email && (
           <button
             onClick={() => navigator.clipboard.writeText(member.email ? member.email : "")}
@@ -63,6 +64,7 @@ const MemberCard: React.FC<MemberCardProps> = ({member, index, delayModulus}) =>
         {links.twitter && <a href={links.twitter} target="_blank" rel="noopener noreferrer" className="hover:text-space-accent hover:scale-150 active:text-black active:scale-100 transition"><FaTwitter /></a>}
         {links.medium && <a href={links.medium} target="_blank" rel="noopener noreferrer" className="hover:text-space-accent hover:scale-150 active:text-black active:scale-100 transition"><FaMedium /></a>}
         {links.quora && <a href={links.quora} target="_blank" rel="noopener noreferrer" className="hover:text-space-accent hover:scale-150 active:text-black active:scale-100 transition"><FaQuora /></a>}
+        </div>
       </div>
     </motion.div>
   )
