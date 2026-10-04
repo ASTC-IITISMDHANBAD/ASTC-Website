@@ -173,7 +173,7 @@ export const members: Member[] = [
 			instagram: "https://www.instagram.com/sau_mya_14/",
 			twitter: "https://x.com/somlo1406?t=-7L2jhmZ7s5h29botWTOgQ&s=09"
 		},
-		img: null,
+		img: "saumya.jpg",
 		yearOfGrad: "2029",
 	},
 	
@@ -200,7 +200,7 @@ export const members: Member[] = [
 			linkedin: "https://www.linkedin.com/in/mayuresh-bhor-0415ab378",
 			instagram: "https://www.instagram.com/mb_bhor007?igsh=MWVuNWVoampuYXhuNA==",
 		},
-		img: null,
+		img: "mayuresh.jpg",
 		yearOfGrad: "2029",
 	},
 	
@@ -273,7 +273,7 @@ export const members: Member[] = [
 			linkedin: "https://www.linkedin.com/in/patil-parth-d-385840278?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
 			instagram: "patilparth743",
 		},
-		img: null,
+		img: "Parth.jpg",
 		yearOfGrad: "2029 ",
 	},
 	

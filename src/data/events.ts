@@ -25,7 +25,7 @@ export const events: Event[] = [
   },
     {
     id: 2,
-    title: "Data Driven Workshop and Event (BEYOND THE STARS)",
+    title: "BEYOND THE STARS (Data Driven Workshop and Event )",
     date: "August 17, 2026 [7:00 PM Onwards]",
     location: "NLHC, IIT ISM Dhanbad",
     description: "Diving into astronomical data, uncover hidden patterns, and building a model capable of detecting exoplanets hiding within stellar light curves",
