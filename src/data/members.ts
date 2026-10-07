@@ -29,7 +29,7 @@ export const members: Member[] = [
 			instagram: "https://www.instagram.com/sau_mya_14/",
 			twitter: "https://x.com/somlo1406?t=-7L2jhmZ7s5h29botWTOgQ&s=09"
 		},
-		img: " saumya.jpg ",
+		img: "saumya.jpg ",
 		yearOfGrad: "2029",
 	},
 	
