@@ -355,7 +355,7 @@ export const members: Member[] = [
 		contactNo: "9855745211",
 		links: {
 			github: "https://github.com/adhiirraj",
-			linkedin: "https://www.linkedin.com/in/adhiirraj//",
+			linkedin: "https://www.linkedin.com/in/adhiirraj/",
 			instagram: "https://www.instagram.com/adhiirraj/",
 			twitter: "https://x.com/25je0608",
 		},
