@@ -12,7 +12,7 @@ export const members: Member[] = [
 		linkedin: "https://linkedin.com/in/shreya-mittal-0bab81377",
 		instagram: "shreyamittal_022",
 		},
-		img: null,
+		img: "shreya.jpeg",
 		yearOfGrad: "2029",
 	},
 
@@ -311,7 +311,7 @@ export const members: Member[] = [
       linkedin: "https://www.linkedin.com/in/subrat-panda-1402aa317",
       instagram: "https://www.instagram.com/soupiepanda/",
     },
-    img: "subrat-panda.jpeg",
+    img: "subrat.jpeg",
     yearOfGrad: "2028",
   },
   {
