@@ -37,6 +37,7 @@ export interface NewsItem {
 export interface Member {
   id: string;
   name: string;
+  post?: string;
   email: string | null;
   contactNo: string | null;
   links: {

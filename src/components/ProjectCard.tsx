@@ -20,7 +20,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
         <img
           src={project.image}
           alt={project.title}
-          className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+          className={`w-full h-full object-cover transition-transform duration-500 hover:scale-105 ${
+            project.title === "Gravitational Wave Detection" ? "object-top" : "object-center"
+          }`}
         />
       </div>
       <div className="p-5 flex-grow flex flex-col">

@@ -25,7 +25,7 @@ export const events: Event[] = [
   },
     {
     id: 2,
-    title: "Data Driven Workshop and Event (BEYOND THE STARS)",
+    title: "BEYOND THE STARS (Data Driven Workshop and Event )",
     date: "August 17, 2026 [7:00 PM Onwards]",
     location: "NLHC, IIT ISM Dhanbad",
     description: "Diving into astronomical data, uncover hidden patterns, and building a model capable of detecting exoplanets hiding within stellar light curves",
@@ -101,7 +101,7 @@ export const events: Event[] = [
     title: "Code the Cosmos",
     date: "October 11th, 2025 [3:00 PM - 6:00 PM]",
     location: "NLHC , IIT ISM Dhanbad",
-    description: "Experience the wonders of space through the cinematic masterpiece 'Interstellar'. Join us for an unforgettable journey across the cosmos!",
+    description: "Code the Cosmos 2025 — a cosmic coding challenge sponsored by Nebula Space Organization. Join us for an unforgettable journey across the cosmos!",
     image: "/Code-the-Cosmos-Poster[1].png",
     isUpcoming: false,
     // registrationLink: "#"
@@ -147,13 +147,5 @@ export const events: Event[] = [
     // registrationLink: "#"
   },
   
-  {
-    id: 14,
-    title: "Guest Lecture",
-    date: "",
-    location: "penman Auditorium, IIT ISM Dhanbad",
-    description: "",
-    image: "https://images.pexels.com/photos/3805983/pexels-photo-3805983.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    isUpcoming: false,
-  },
+  
 ];
