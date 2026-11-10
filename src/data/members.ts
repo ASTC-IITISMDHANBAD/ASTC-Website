@@ -597,19 +597,6 @@ export const members: Member[] = [
   },
 
   {
-    id: "23JE0190",
-    name: "Ayan Aslam",
-    email: "ayaninstudy10000@gmail.com",
-    contactNo: "7987187558",
-    links: {
-      github: "https://github.com/ayan-aslam",
-      linkedin: "https://www.linkedin.com/in/ayan-aslam-761bb8284/",
-      instagram: "https://www.instagram.com/shut_up__ayan/",
-    },
-    img: "ayan-aslam.jpg",
-    yearOfGrad: "2027",
-  },
-  {
     id: "23JE0826",
     name: "Rohit Kumar R",
     email: "23je0826@iitism.ac.in",
