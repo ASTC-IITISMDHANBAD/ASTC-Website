@@ -2,6 +2,16 @@ import { Project } from '../types';
 
 export const projects: Project[] = [
   {
+    id: 9,
+    title: "Motorized Small Radio Telescope  (MSRT)",
+    description: "Goal is to build a Motorized Small Radio Telescope (MSRT), a 70cm Ku-band radio telescope with automated Azimuth-Elevation tracking, upgraded from the manual Affordable Small Radio Telescope (ASRT) design pioneered at IUCAA and IIT Roorkee.",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeqqsbZ9Er-3KHjx0ydnftl41hYkCTcEkopn6BSy8tuw&s=10",
+    category: "Robotics",
+    
+  },
+
+
+  {
     id: 1,
     title: "Gravitational Wave Detection",
     description: "Goal is to develop a pipeline to detect simulated compact-binary gravitational-wave signals embedded in real LIGO detector noise. The project involved signal processing, data synthesis, and machine learning techniques to distinguish gravitational-wave signals from background noise through binary classification.",
@@ -65,5 +75,7 @@ export const projects: Project[] = [
     category: "Robotics",
     
   }
+
+
 
  ];

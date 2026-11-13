@@ -455,7 +455,7 @@ export const members: Member[] = [
       linkedin: "https://www.linkedin.com/in/subrat-panda-1402aa317",
       instagram: "https://www.instagram.com/ilovequizzing/",
     },
-    img: "subrat-panda.jpeg",
+    img: "subrat.jpeg",
     yearOfGrad: "2028",
   },
 
