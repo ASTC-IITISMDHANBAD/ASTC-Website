@@ -25,19 +25,19 @@ const Contact: React.FC = () => {
   // Provides fallbacks to empty strings for safety if variables aren't set,
   // but they MUST be configured for production deployments.
   const SERVICE_ID: string =
-   
+
     import.meta.env.VITE_EMAILJS_SERVICE_ID ||
     "";
   const TEMPLATE_ID: string =
-    
+
     import.meta.env.VITE_EMAILJS_TEMPLATE_ID ||
     "";
   const PUBLIC_KEY: string =
-    
+
     import.meta.env.VITE_EMAILJS_PUBLIC_KEY ||
     "";
 
-   
+
   /**
    * Handles the form submission to send an email via EmailJS.
    * @param e The form submission event.
@@ -220,7 +220,7 @@ const Contact: React.FC = () => {
                     {
                       icon: <Linkedin size={24} />,
                       label: "LinkedIn",
-                      link: "https://www.linkedin.com/company/arka-iit-ism-dhanbad/",
+                      link: "https://www.linkedin.com/company/astc-iit-ism-dhanbad/",
                     },
                   ].map((social, index) => (
                     <a
@@ -343,29 +343,29 @@ const Contact: React.FC = () => {
       </section>
 
       {/* Map Section */}
-			<section className="py-16 md:py-24 bg-space-primary/20">
-				<div className="container mx-auto px-4 sm:px-6 lg:px-8">
-					<SectionTitle
-						title="Find Us"
-						subtitle="Visit us at IIT ISM Dhanbad campus"
-						light={true}
-					/>
+      <section className="py-16 md:py-24 bg-space-primary/20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionTitle
+            title="Find Us"
+            subtitle="Visit us at IIT ISM Dhanbad campus"
+            light={true}
+          />
 
-					<div className="mt-8 rounded-lg overflow-hidden h-[400px]">
-						<iframe
-							title="NVCTI IIT ISM Dhanbad"
-							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.168329827113!2d86.43601627550662!3d23.812612578628027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f6bd31113a1ad3%3A0x526d1505f4fa50a7!2sNaresh%20Vashisht%20Centre%20for%20Tinkering%20%26%20Innovation%20(NVCTI%2C%20IIT-ISM)!5e0!3m2!1sen!2sin!4v1766435866982!5m2!1sen!2sin"
-							className="w-full h-full border-0"
-							loading="lazy"
-							referrerPolicy="no-referrer-when-downgrade"
-							style={{
-								filter:
-									"invert(92%) hue-rotate(180deg) brightness(85%) contrast(105%)",
-							}}
-						/>
-					</div>
-				</div>
-			</section>
+          <div className="mt-8 rounded-lg overflow-hidden h-[400px]">
+            <iframe
+              title="NVCTI IIT ISM Dhanbad"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.168329827113!2d86.43601627550662!3d23.812612578628027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f6bd31113a1ad3%3A0x526d1505f4fa50a7!2sNaresh%20Vashisht%20Centre%20for%20Tinkering%20%26%20Innovation%20(NVCTI%2C%20IIT-ISM)!5e0!3m2!1sen!2sin!4v1766435866982!5m2!1sen!2sin"
+              className="w-full h-full border-0"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              style={{
+                filter:
+                  "invert(92%) hue-rotate(180deg) brightness(85%) contrast(105%)",
+              }}
+            />
+          </div>
+        </div>
+      </section>
 
       {/* FAQ Section */}
       <section className="py-16 md:py-24">
@@ -564,7 +564,7 @@ export default Contact;
 //                     {
 //                       icon: <Linkedin size={24} />,
 //                       label: "LinkedIn",
-//                       link: "https://www.linkedin.com/company/arka-iit-ism-dhanbad/",
+//                       link: "https://www.linkedin.com/company/astc-iit-ism-dhanbad/",
 //                     },
 //                     // { icon: <Github size={24} />, label: "GitHub" }
 //                   ].map((social, index) => (
