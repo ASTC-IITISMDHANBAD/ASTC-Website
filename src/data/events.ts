@@ -1,16 +1,14 @@
 import { Event } from '../types';
 
 export const events: Event[] = [
-
-      {
+  {
     id: 15,
     title: "Code the Cosmos (Concetto 2026)",
-    date: "Coming soon",
-    location: "TBD",
-    description: "",
+    date: "September 10, 2026",
+    location: "NAC Auditorium, IIT ISM Dhanbad",
+    description: "Code the Cosmos — a cosmic coding challenge. Join us for an unforgettable journey across the cosmos!",
     image: "https://upload.wikimedia.org/wikipedia/en/8/8e/Cosmos_spacetime_odyssey_titlecard.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
-    isUpcoming: true,
-    // registrationLink: "#"
+    isUpcoming: false,
   },
 
     {

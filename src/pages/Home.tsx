@@ -72,16 +72,6 @@ const Home: React.FC = () => {
                   </Button>
                 </Link>
 
-                <Link to="/join" className="w-full sm:w-auto">
-                  <Button
-                    variant="outline"
-                    size="md"
-                    className="w-full text-sm"
-                  >
-                    Join Us
-                  </Button>
-                </Link>
-
               </div>
             </motion.div>
           </div>
@@ -216,7 +206,7 @@ const Home: React.FC = () => {
                   </p>
 
                   {event.registrationLink && (
-                    <Link to="/join">
+                    <Link to="/about">
                       <Button variant="outline" size="sm">
                         Learn more
                       </Button>
@@ -284,11 +274,6 @@ const Home: React.FC = () => {
                 delay: 0.7
               }}
             >
-              <Link to="/join">
-                <Button variant="primary" size="lg">
-                  Join Us!
-                </Button>
-              </Link>
             </motion.div>
 
           </div>

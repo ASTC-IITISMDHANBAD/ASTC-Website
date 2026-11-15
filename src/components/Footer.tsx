@@ -30,14 +30,12 @@ const Footer: React.FC = () => {
                 "Events",
                 "Projects",
                 "Members",
-                "Join Us",
                 "Contact",
               ].map((item) => (
                 <li key={item}>
                   <NavLink
-                    to={`/${
-                      item === "Home" ? "" : item.toLowerCase().replace(" ", "")
-                    }`}
+                    to={`/${item === "Home" ? "" : item.toLowerCase().replace(" ", "")
+                      }`}
                     className="text-gray-300 hover:text-space-accent transition-colors text-sm"
                   >
                     {item}
@@ -82,7 +80,7 @@ const Footer: React.FC = () => {
                 <Twitter size={20} />
               </a> */}
               <a
-                href="https://www.linkedin.com/company/arka-iit-ism-dhanbad/"
+                href="https://www.linkedin.com/company/astc-iit-ism-dhanbad/"
                 aria-label="LinkedIn"
                 className="text-gray-300 hover:text-space-accent transition-colors"
               >
